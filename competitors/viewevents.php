@@ -39,9 +39,9 @@ include('session.php');
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://Paul Waweru.com/nice-admin-bootstrap-admin-html-template/
-      Author: Paul Waweru
-      Author URL: https://Paul Waweru.com
+      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
+      Author: John elton okoth
+      Author URL: https://John elton okoth.com
     ======================================================= -->
 </head>
 
@@ -272,10 +272,10 @@ if (isset($_GET['bpid'])) {
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://Paul Waweru.com/license/
-            Purchase the pro version form: https://Paul Waweru.com/buy/?theme=NiceAdmin
+            Licensing information: https://John elton okoth.com/license/
+            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
           -->
-          &copy <a href="https://Paul Waweru.com/">Paul Waweru</a>
+          &copy <a href="https://John elton okoth.com/">John elton okoth</a>
         </div>
     </div>
   </section>

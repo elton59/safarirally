@@ -1,7 +1,7 @@
 /**
 * PHP Email Form Validation - v3.1
-* URL: https://Paul Waweru.com/php-email-form/
-* Author: Paul Waweru.com
+* URL: https://John elton okoth.com/php-email-form/
+* Author: John elton okoth.com
 */
 (function () {
   "use strict";
