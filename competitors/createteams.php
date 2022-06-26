@@ -2,8 +2,7 @@
 include("header.php");
 include("sidebar.php");
 include("session.php");
-include("codriversession.php");
-include("recee_session.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,9 +42,9 @@ include("recee_session.php");
   <link href="../logistics/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
   <!-- =======================================================
     Theme Name: NiceAdmin
-    Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-    Author: John elton okoth
-    Author URL: https://John elton okoth.com
+    Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+    Author: paul waweru
+    Author URL: https://paul waweru.com
   ======================================================= -->
 </head>
 <body>
@@ -54,14 +53,7 @@ include("recee_session.php");
   <section id="container" class="">
   
   <?php
-    $sunguch=$codriver_session ;
-    $asunguch=$codriver_session ;
-    $result=$mysqli->query("select * from codriverdetails where email='$sunguch' ")or die($mysqli->error);
-    while($row=$result->fetch_assoc())
-    {
-     
-      $codfname=$row['firstname'];
-    }
+  
     
     $dsunguch=$login_session;
     $result=$mysqli->query("select * from driverdetails where email='$dsunguch'")or die($mysqli->error);
@@ -122,27 +114,84 @@ include("recee_session.php");
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Driver Name</label>
                     <div class="col-sm-10">
-                      <input name="tmdname" type="text" class="form-control round-input" placeholder="input Drivername" value="<?php echo $dfname ?>" >
+                      <input name="tmdname" type="text" class="form-control round-input" placeholder="input Drivername" value="<?php echo $dfname ?>" readonly >
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">CoDriverName</label>
                     <div class="col-sm-10">
-                      <input name="tmcodname" type="text" class="form-control round-input" placeholder="input codrivername" value="<?php echo$codfname?>" >
+                      <select name="tmcodname" class="form-control round-input" readonly>
+                    <?php 
+                                            $result=$mysqli->query("select * from codriverdetails where driver_email='$login_session' limit 1")or die($mysqli->error);
+                                            $drivers_list=array();
+                                           
+                                            while( $row=$result->fetch_array())
+                                            {
+                                          
+                                                $driver_email=$row['firstname'];
+                                               
+                                                array_push($drivers_list,$driver_email);
+                                                
+                                            
+                                               
+                                            }
+                                            foreach($drivers_list as $drivers)
+                                            {
+
+                                               echo "<option value='$drivers' class='form-control'>$drivers</option>";
+                                     
+                                            }
+                                           ?>
+                                   </select>
+                                        
+                    </div>
+                  </div>
+            
+                  <div class="form-group">
+                  <label class="col-sm-2 control-label"> Race Car registration number</label>
+                    <div class="col-sm-10" >
+                     <select name="tmrcno" class="form-control round-input" readonly>
+                    <?php 
+                                            $result=$mysqli->query("select * from racecar where driver_email='$login_session' limit 1")or die($mysqli->error);
+                                            $drivers_list=array();
+                                           
+                                            while( $row=$result->fetch_array())
+                                            {
+                                          
+                                                $driver_email=$row['registration_number'];
+                                                array_push($drivers_list,$driver_email);
+                                            
+                                            
+                                               
+                                            }
+                                            foreach($drivers_list as $drivers)
+                                            {
+
+                                               echo "<option value='$drivers' class='form-control'>$drivers</option>";
+                                     
+                                            }
+                                           ?>
+                                   </select>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">RaceCarRegistrationNumber</label>
+     
                     <div class="col-sm-10">
-                      <input name="tmrcno" type="text" class="form-control round-input" placeholder="input Racecarregistrationnumber" >
+                      <input type="hidden"  name="tmpid" type="text" class="form-control round-input" placeholder="input paymentID" value="yet to be assigned" readonly>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Paymentid</label>
+                   
                     <div class="col-sm-10">
-                      <input name="tmpid" type="text" class="form-control round-input" placeholder="input paymentID" value="yet to be assigned" readonly>
+                      <input type="hidden" name="tmdemail" type="text" class="form-control round-input" placeholder="input drivermeail" value="<?php echo $login_session ?>" >
                     </div>
-                  </div>
+                    <div class="form-group">
+                 
+                 <div class="col-sm-10">
+                   <input type="hidden" name="tmcodname2" />
+                                     
+                 </div>
+               </div>
                   <center>
                   <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="submit" name="adtm" value="Create"/>
                    <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="reset" value="Cancel"/></center>
@@ -165,8 +214,8 @@ include("recee_session.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
         </div>
     </div>
   </section>

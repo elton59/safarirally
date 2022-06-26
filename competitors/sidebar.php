@@ -12,7 +12,17 @@
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
-          </li>*
+          </li>
+          <!-- <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>Book Event</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+            <li><a class="" href="viewevents.php">Book Event</a></li>
+            </ul>
+          </li> -->
           <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
@@ -37,9 +47,9 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-            <li><a class="" href="createcodrivers.php">Add Codriver</a></li> 
+            <li><a class="" href="createcodrivers.php">Register Codriver</a></li> 
             <li><a class="" href="viewcodrivers.php">View Codrivers</a></li> 
-            <li><a class="" href="editcodrivers.php">edit  CoDrivers</a></li>  
+            <!-- <li><a class="" href="editcodrivers.php">edit  CoDrivers</a></li>   -->
             </ul>
           </li>
           <li class="sub-menu">
@@ -51,7 +61,7 @@
             <ul class="sub">  
               <li><a class="createstandings.php" href="createteams.php"> AddTeam</a></li>
               <li><a class="viewstandings.php" href="viewteams.php">ViewTeam</a></li>
-              <li><a class="viewstandings.php" href="Editteams.php">EditTeam</a></li>
+              <!-- <li><a class="viewstandings.php" href="Editteams.php">EditTeam</a></li> -->
             </ul>
           </li>
           <li class="sub-menu">
@@ -61,6 +71,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
+            <li><a class="" href="createserviceparks.php">create Service Park</a></li>
               <li><a class="" href="viewserviceparks.php">View Service Parks</a></li>
             </ul>
           </li>
