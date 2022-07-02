@@ -1,10 +1,12 @@
 <?php
 
-$servername = "127.0.0.1";
+
+
+
+$servername ="localhost";
 $username = "root";
 $password = "";
 $db = "safarirally";
-
 // Create connection
 $mysqli =new mysqli($servername, $username, $password,$db)or die(mysqli_error($mysqli));
 
@@ -30,7 +32,7 @@ if(isset($_POST['schev']))
 
         
           
-           $sql=$mysqli->query("INSERT INTO eventdetail(eventid,eventname,sponsor,organizer,eventdate,duration,venue,numberofcompetitiors,teamtagnumber,scheduleid,awardid) VALUES('$evid','$evname','$evspon','$evorg','$evdate','$evdue','$evven','$evnoc','$evttno','$evschid','$evawid')") or die($mysqli->error);
+           $sql=$mysqli->query("INSERT INTO eventdetail(eventid,eventname,sponsor,organizer,eventdate,duration,venue,numberofcompetitors,teamtagnumber,scheduleid,awardid) VALUES('$evid','$evname','$evspon','$evorg','$evdate','$evdue','$evven','$evnoc','$evttno','$evschid','$evawid')") or die($mysqli->error);
            if($sql){
      
      echo "<script>alert('record added successfully');
@@ -64,7 +66,7 @@ if(isset($_POST['schev']))
  
          
            
-            $sql=$mysqli->query("UPDATE eventdetail SET eventid='$evid',eventname='$evname',sponsor='$evspon',organizer='$evorg',eventdate='$evdate',duration='$evdue',venue='$evven',numberofcompetitiors='$evnoc',teamtagnumber='$evttno',scheduleid='$evschid',awardid='$evawid' where id='$upid'") or die($mysqli->error);
+            $sql=$mysqli->query("UPDATE eventdetail SET eventid='$evid',eventname='$evname',sponsor='$evspon',organizer='$evorg',eventdate='$evdate',duration='$evdue',venue='$evven',numberofcompetitors='$evnoc',teamtagnumber='$evttno',scheduleid='$evschid',awardid='$evawid' where id='$upid'") or die($mysqli->error);
             if($sql){
       
       echo "<script>alert('record Update successfully');
@@ -1281,31 +1283,26 @@ if(isset($_POST['ufd']))
    }
  }
  //create feedback
-if(isset($_POST['cfd']))
-{
- 
-   $fdemail=$_POST['fdemail'];
-   $fdmessage=$_POST['fdmessage'];
- ;
-  
- 
+if (isset($_POST['cfd'])) {
+  $fdremail = $_POST['fdremail'];
+  $fdsemail = $_POST['fdsemail'];
+  $fdmessage = $_POST['fdmessage'];;
 
-           $sql=$mysqli->query("INSERT INTO feedback (email,message) values('$fdemail','$fdmessage')") or die($mysqli->error);
-           if($sql){
-     
-     echo "<script>alert('record added successfully');
-       window.location.replace('feedback.php');
+
+
+  $sql = $mysqli->query("INSERT INTO feedback (receiver,email,message) values('$fdsemail','$fdremail','$fdmessage')") or die($mysqli->error);
+  if ($sql) {
+
+    echo "<script>alert('record added successfully');
+       window.location.replace('sentbox.php');
 
            </script>";
-
-   }
-   else
-   {
-     echo "<script><alert>(' failed');
-           window.location.replace('feedback.php');
+  } else {
+    echo "<script><alert>(' failed');
+           window.location.replace('createfeedback.php');
            </script>";
-   }
- }
+  }
+}
 
 //feedbackbuttons
 

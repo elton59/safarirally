@@ -41,9 +41,9 @@ include("sidebar.php")
   <link href="../logistics/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
   <!-- =======================================================
     Theme Name: NiceAdmin
-    Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-    Author: John elton okoth
-    Author URL: https://John elton okoth.com
+    Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+    Author: paul waweru
+    Author URL: https://paul waweru.com
   ======================================================= -->
 </head>
 
@@ -59,7 +59,7 @@ include("sidebar.php")
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="main.php">Home</a></li>
               <li><i class="fa fa-laptop"></i>Dashboard</li>
             </ol>
           </div>
@@ -72,7 +72,7 @@ include("sidebar.php")
               <div class="count"><?php
               $result=$mysqli->query("select *  from eventdetail") or die(mysqli_error($mysqli));
            
-              while(list($eventid,$eventname,$sponsor,$organizer,$eventdate,$venue,$duration,$numberofcompetitiors,$teamtagnumber,$scheduleid,$awardid)=mysqli_fetch_array($result))
+              while(list($eventid,$eventname,$sponsor,$organizer,$eventdate,$venue,$duration,$teamtagnumber,$scheduleid,$awardid)=mysqli_fetch_array($result))
               {
                 $sql="SELECT COUNT(Eventid) AS total FROM eventdetail  ";
                 $result=$mysqli->query($sql);
@@ -96,7 +96,7 @@ include("sidebar.php")
            
               while(list($id)=mysqli_fetch_array($result))
               {
-                $sql="SELECT COUNT(id) AS total FROM driverdetails where status='pending'";
+                $sql="SELECT COUNT(id) AS total FROM driverdetails where status='pending' ";
                 $result=$mysqli->query($sql);
                 $values=mysqli_fetch_assoc($result);
                 $num_rows=$values["total"];
@@ -104,9 +104,123 @@ include("sidebar.php")
               }
               ?>
               <div class="title">new drivers</div>
+              
+              
             </div>
+            
             <!--/.info-box-->
           </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box brown-bg">
+            <i class="fa fa-cubes"></i>
+            <?php
+              $result=$mysqli->query("select id from schedule") or die(mysqli_error($mysqli));
+           
+              while(list($id)=mysqli_fetch_array($result))
+              {
+                $sql="SELECT COUNT(id) AS total FROM spectatordetails where status='pending' ";
+                $result=$mysqli->query($sql);
+                $values=mysqli_fetch_assoc($result);
+                $num_rows=$values["total"];
+                echo "<h3>$num_rows</h3>";
+              }
+              ?>
+              <div class="title">new spectator</div>
+              
+              
+            </div>
+            
+            <!--/.info-box-->
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box brown-bg">
+            <i class="fa fa-cubes"></i>
+            <?php
+              $result=$mysqli->query("select id from schedule") or die(mysqli_error($mysqli));
+           
+              while(list($id)=mysqli_fetch_array($result))
+              {
+                $sql="SELECT COUNT(id) AS total FROM sponsordetails where status='pending' ";
+                $result=$mysqli->query($sql);
+                $values=mysqli_fetch_assoc($result);
+                $num_rows=$values["total"];
+                echo "<h3>$num_rows</h3>";
+              }
+              ?>
+              <div class="title">new sponsor</div>
+              
+              
+            </div>
+            
+            <!--/.info-box-->
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box brown-bg">
+            <i class="fa fa-cubes"></i>
+            <?php
+              $result=$mysqli->query("select id from schedule") or die(mysqli_error($mysqli));
+           
+              while(list($id)=mysqli_fetch_array($result))
+              {
+                $sql="SELECT COUNT(id) AS total FROM mediadetails where status='pending' ";
+                $result=$mysqli->query($sql);
+                $values=mysqli_fetch_assoc($result);
+                $num_rows=$values["total"];
+                echo "<h3>$num_rows</h3>";
+              }
+              ?>
+              <div class="title">new Media</div>
+              
+              
+            </div>
+            
+            <!--/.info-box-->
+          </div>  
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box brown-bg">
+            <i class="fa fa-cubes"></i>
+            <?php
+              $result=$mysqli->query("select id from schedule") or die(mysqli_error($mysqli));
+           
+              while(list($id)=mysqli_fetch_array($result))
+              {
+                $sql="SELECT COUNT(id) AS total FROM finance where status='pending' ";
+                $result=$mysqli->query($sql);
+                $values=mysqli_fetch_assoc($result);
+                $num_rows=$values["total"];
+                echo "<h3>$num_rows</h3>";
+              }
+              ?>
+              <div class="title">new Finance Manager</div>          
+            </div>
+          
+            
+            <!--/.info-box-->
+          </div>  
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box brown-bg">
+            <i class="fa fa-cubes"></i>
+            <?php
+              $result=$mysqli->query("select id from schedule") or die(mysqli_error($mysqli));
+           
+              while(list($id)=mysqli_fetch_array($result))
+              {
+                $sql="SELECT COUNT(id) AS total FROM logistics where status='pending' ";
+                $result=$mysqli->query($sql);
+                $values=mysqli_fetch_assoc($result);
+                $num_rows=$values["total"];
+                echo "<h3>$num_rows</h3>";
+              }
+              ?>
+              <div class="title">new Logistics</div>          
+            </div>
+          
+            
+            <!--/.info-box-->
+          </div> 
+            
+            <!--/.info-box-->
+          </div>  
           <!--/.col-->
 
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -164,160 +278,6 @@ include("sidebar.php")
           </div>
         </div>
 
-        <div class="row">
-
-          <div class="col-lg-9 col-md-12">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h2><i class="fa fa-flag-o red"></i><strong>Registered Users</strong></h2>
-                <div class="panel-actions">
-                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
-                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
-                </div>
-              </div>
-              <div class="panel-body">
-                <table class="table bootstrap-datatable countries">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Country</th>
-                      <th>Users</th>
-                      <th>Online</th>
-                      <th>Performance</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>
-                      <td>Germany</td>
-                      <td>2563</td>
-                      <td>1025</td>
-                      <td>
-                        <div class="progress thin">
-                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width: 73%">
-                          </div>
-                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100" style="width: 27%">
-                          </div>
-                        </div>
-                        <span class="sr-only">73%</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><img src="img/India.png" style="height:18px; margin-top:-2px;"></td>
-                      <td>India</td>
-                      <td>3652</td>
-                      <td>2563</td>
-                      <td>
-                        <div class="progress thin">
-                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">
-                          </div>
-                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" style="width: 43%">
-                          </div>
-                        </div>
-                        <span class="sr-only">57%</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><img src="img/Spain.png" style="height:18px; margin-top:-2px;"></td>
-                      <td>Spain</td>
-                      <td>562</td>
-                      <td>452</td>
-                      <td>
-                        <div class="progress thin">
-                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100" style="width: 93%">
-                          </div>
-                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100" style="width: 7%">
-                          </div>
-                        </div>
-                        <span class="sr-only">93%</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><img src="img/India.png" style="height:18px; margin-top:-2px;"></td>
-                      <td>Russia</td>
-                      <td>1258</td>
-                      <td>958</td>
-                      <td>
-                        <div class="progress thin">
-                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                          </div>
-                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                          </div>
-                        </div>
-                        <span class="sr-only">20%</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><img src="img/Spain.png" style="height:18px; margin-top:-2px;"></td>
-                      <td>USA</td>
-                      <td>4856</td>
-                      <td>3621</td>
-                      <td>
-                        <div class="progress thin">
-                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                          </div>
-                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                          </div>
-                        </div>
-                        <span class="sr-only">20%</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>
-                      <td>Brazil</td>
-                      <td>265</td>
-                      <td>102</td>
-                      <td>
-                        <div class="progress thin">
-                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                          </div>
-                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                          </div>
-                        </div>
-                        <span class="sr-only">20%</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>
-                      <td>Coloumbia</td>
-                      <td>265</td>
-                      <td>102</td>
-                      <td>
-                        <div class="progress thin">
-                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                          </div>
-                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                          </div>
-                        </div>
-                        <span class="sr-only">20%</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><img src="img/Germany.png" style="height:18px; margin-top:-2px;"></td>
-                      <td>France</td>
-                      <td>265</td>
-                      <td>102</td>
-                      <td>
-                        <div class="progress thin">
-                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                          </div>
-                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                          </div>
-                        </div>
-                        <span class="sr-only">20%</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-            </div>
-
-          </div>
- 
-
-        </div>
 
 
       </section>
@@ -326,8 +286,8 @@ include("sidebar.php")
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
         </div>
       </div>

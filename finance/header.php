@@ -11,8 +11,8 @@ include("session.php");
         <!--  search form start -->
         <ul class="nav top-menu">
           <li>
-            <form class="navbar-form">
-              <input class="form-control" placeholder="Search" type="text">
+            <form class="navbar-form" method="POST" action="search.php">
+              <input class="form-control" name="search" placeholder="Search event" type="text">
             </form>
           </li>
         </ul>
@@ -43,7 +43,9 @@ include("session.php");
               ?></span>
                         </a>
             <ul class="dropdown-menu extended inbox">
-              <div class="notify-arrow notify-arrow-blue"><?php
+              <div class="notify-arrow notify-arrow-blue"></div>
+              <li>
+                <p class="blue">You have <?php
                  $sunguch=$login_session;
               $result=$mysqli->query("select *  from feedback where status='pending' and email='$sunguch'") or die(mysqli_error($mysqli));
            
@@ -55,8 +57,7 @@ include("session.php");
                 $num_rows=$values["total"];
                 echo "$num_rows";
               }
-              ?>
-               new messages</p>
+              ?> new messages</p>
               </li>
               
               

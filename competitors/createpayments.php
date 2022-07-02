@@ -40,9 +40,9 @@ include("sidebar.php");
   <link href="../logistics/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
   <!-- =======================================================
     Theme Name: NiceAdmin
-    Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-    Author: John elton okoth
-    Author URL: https://John elton okoth.com
+    Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+    Author: paul waweru
+    Author URL: https://paul waweru.com
   ======================================================= -->
 </head>
 <body>
@@ -57,6 +57,10 @@ $result=$mysqli->query("select * from driverdetails  where email='$email'")or di
                  
                    
                   ;}
+                  if(isset($_GET['bpid']))
+                  {
+                  $bpid=$_GET['bpid'];
+                  }
 ?>
   <!-- container section start -->
   <section id="container" class="">
@@ -71,57 +75,56 @@ $result=$mysqli->query("select * from driverdetails  where email='$email'")or di
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="viewpayments.php">View Payments</a></li>
             </ol>
-            <ol class="breadcrumb">
+            <!-- <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="editpayments.php">Edit Payments</a></li>
-            </ol>
+            </ol> -->
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-            Create Driver
+          Paymen Form
               </header>
               <div class="panel-body">
                 <form class="form-horizontal " method="POST" action="process.php">
                <P>Payments are as follows:<br/>
+               Mpesa Paybill:3345667
                Accomodation :- Ksh 15000 per individual <br/>
                competitors Ragistration :- Ksh 75000 per team  <br/>
                spectators Registration :-Ksh 12000 per individual <br/>
                   <div class="form-group">
+                  <input  name="id"type="hidden" class="form-control round-input" placeholder="input TransactionID" value="<?php echo $bpid?>"required/>
                     <label class="col-sm-2 control-label">Transaction ID</label>
                     <div class="col-sm-10">
-                      <input  name="ptrid"type="text" class="form-control round-input" placeholder="input TransactionID">
+                      <input  name="ptrid"type="text" class="form-control round-input" placeholder="input TransactionID" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Account Name</label>
                     <div class="col-sm-10">
-                      <input name="pname" type="text" class="form-control round-input" placeholder="input Account Name" value='<?php echo $login_session ?>' readonly>
+                      <input name="pname" type="text" class="form-control round-input" placeholder="input Account Name" value='<?php echo $login_session ?>' readonly  required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Payment Date</label>
+                    <div class="col-sm-10">
+                      <input name="pdate" type="date" class="form-control round-input" min="<?php echo date('Y-m-d')?>"  required/>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Amount Paid</label>
                     <div class="col-sm-10">
-                      <input name="pamount" type="text" class="form-control round-input" placeholder="Amount Paid">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Payment For</label>
-                    <div class="col-sm-10">
-                      <select name="ppf"  class="form-control round-input" >
-                        <option value="accomodation">Accomodation</option>
-                        <option value="competitiorsregistration">CompetitorsRegistration</option>
-                        <option value="raceregistration">Race Regitration</option>
+                      <select name="pamount" class="form-control round-input"  required>
+                        <option value='75000'>75000</option> 
                       </select>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">User Category</label>
-                    <div class="col-sm-10">
-                      <input name="puc" type="text" class="form-control round-input" value="driver" readonly>
+                   
                     </div>
                   </div>
+                
                  
                 
                   <center>
@@ -146,8 +149,8 @@ $result=$mysqli->query("select * from driverdetails  where email='$email'")or di
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
         </div>
     </div>
   </section>

@@ -1,8 +1,8 @@
 /**
 * Template Name: Gp - v4.3.0
-* Template URL: https://John elton okoth.com/gp-free-multipurpose-html-bootstrap-template/
-* Author: John elton okoth.com
-* License: https://John elton okoth.com/license/
+* Template URL: https://paul waweru.com/gp-free-multipurpose-html-bootstrap-template/
+* Author: paul waweru.com
+* License: https://paul waweru.com/license/
 */
 (function() {
   "use strict";

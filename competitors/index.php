@@ -133,7 +133,7 @@ span a {
 	
 	<div class="form-box">
 		<div class="header-text">
-			Competitiors Login
+			Competitors Login
 		</div>
 		<form  class="form group" Method="POST" action="process.php">
         <input  name="email" class="form-control"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Your Email Address" type="text"> <br/>

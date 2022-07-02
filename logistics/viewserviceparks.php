@@ -38,9 +38,9 @@ include('session.php');
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -55,7 +55,7 @@ include('session.php');
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-table"></i> Service Parks</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="index.php">Home</a></li>
             </ol>
           </div>
         </div>
@@ -65,6 +65,75 @@ include('session.php');
             <section class="panel">
               <header class="panel-heading">
                 Service Parks
+              </header>
+            
+              <div class="table-responsive">
+              <table class="table-responsive table table-bordered" id="serviceparks">
+                <thead>
+                  <tr>
+                  
+                    <th>Provider</th>
+                   
+            
+                   
+                    
+                   
+                  </tr>
+                </thead>
+                <tbody>
+
+                <?php
+                  $result=$mysqli->query("select * from providers")or die($mysqli->error);
+                  while($row=$result->fetch_assoc())
+                  {
+                    echo
+
+                    "
+                    <tbody>
+                  
+                    <td>".$row['provider']."</td>
+                    
+                
+                   </tbody>
+                    "
+                  ;}
+            ?>
+    
+              </table>
+              <?php
+             if(isset($_GET['adrbuttid']))
+             {
+           
+             $id=$_GET['adrbuttid'];
+             $sql=$mysqli->query("update providers set status='approved'  where id='$id'")or die($mysqli->error);
+             
+             if($sql){
+                   
+               echo "<script>alert('record  success');
+                 window.location.replace('viewserviceparks.php');
+             
+                     </script>";
+             
+             }
+             else
+             {
+               echo "<script><alert>(' failed');
+                     window.location.replace('main.php');
+                     </script>";
+             }
+             }
+             
+              ?>
+              <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
+      </div>
+            </section>
+          </div>
+          </div>
+      <div class="row">
+          <div class="col-12">
+            <section class="panel">
+              <header class="panel-heading">
+                Booked  Service Parks
               </header>
               <div class="table-responsive">
               <table class="table-responsive table table-bordered" id="serviceparks">
@@ -84,7 +153,7 @@ include('session.php');
                 <tbody>
 
                 <?php
-                  $result=$mysqli->query("select * from service where status='booked'")or die($mysqli->error);
+                  $result=$mysqli->query("select * from service where status !='pending'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
@@ -115,7 +184,7 @@ include('session.php');
              if($sql){
                    
                echo "<script>alert('record  success');
-                 window.location.replace('main.php');
+                 window.location.replace('viewserviceparks.php');
              
                      </script>";
              
@@ -143,10 +212,10 @@ include('session.php');
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
-          &copy <a href="https://John elton okoth.com/">John elton okoth</a>
+          &copy <a href="https://paul waweru.com/">paul waweru</a>
         </div>
     </div>
   </section>

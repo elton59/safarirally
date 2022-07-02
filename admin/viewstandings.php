@@ -15,7 +15,8 @@ include("sidebar.php");
   <link rel="shortcut icon" href="img/favicon.png">
 
   <title>view Standings</title>
-<!-- Bootstrap CSS -->
+
+  <!-- Bootstrap CSS -->
 <link href="../logistics/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
   <link href="../logistics/css/bootstrap-theme.css" rel="stylesheet">
@@ -36,9 +37,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -53,7 +54,7 @@ include("sidebar.php");
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-table"></i> Standings</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="main.php">Home</a></li>
             </ol>
           </div>
         </div>
@@ -65,11 +66,11 @@ include("sidebar.php");
                 Standings
               </header>
               <div class="table-responsive">
-               <table class="table-responsive table table-bordered" id="standing">
+               <table class="table-responsive table table-bordered" id="standings">
                 <thead>
                   <tr>
                     <th>StandingID</th>
-                    <th>StandingDate/th>
+                    <th>StandingDate</th>
                     <th>TagNumber</th>
                     <th>DriverID</th>
                     <th>CoDriverName</th>
@@ -107,8 +108,7 @@ include("sidebar.php");
                     "
                   ;}
             ?>
- 
-
+    
               </table>
               <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
                   </div>
@@ -124,14 +124,15 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
-          &copy <a href="https://John elton okoth.com/">John elton okoth</a>
+          &copy <a href="https://paul waweru.com/">paul waweru</a>
         </div>
     </div>
   </section>
   <!-- container section end -->
+  <!-- javascripts -->
   <!-- javascripts -->
   <script src="../logistics/js/jquery.js"></script>
   <script src="../logistics/js/bootstrap.min.js"></script>
@@ -147,70 +148,69 @@ function fnExcelReport()
 
 {
 
-    var tab_text="<table border='2px'><tr bgcolor='#87AFC6'>";
+ var tab_text="<table border='2px'><tr bgcolor='#87AFC6'>";
 
-    var textRange; var j=0;
+ var textRange; var j=0;
 
-    tab = document.getElementById('standing'); // id of table
-
-
-
-    for(j = 0 ; j < tab.rows.length ; j++) 
-
-    {     
-
-        tab_text=tab_text+tab.rows[j].innerHTML+"</tr>";
-
-        //tab_text=tab_text+"</tr>";
-
-    }
+ tab = document.getElementById('standings'); // id of table
 
 
 
-    tab_text=tab_text+"</table>";
+ for(j = 0 ; j < tab.rows.length ; j++) 
 
-    tab_text= tab_text.replace(/<A[^>]*>|<\/A>/g, "");//remove if u want links in your table
+ {     
 
-    tab_text= tab_text.replace(/<img[^>]*>/gi,""); // remove if u want images in your table
+     tab_text=tab_text+tab.rows[j].innerHTML+"</tr>";
 
-    tab_text= tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); // reomves input params
+     //tab_text=tab_text+"</tr>";
 
-
-
-    var ua = window.navigator.userAgent;
-
-    var msie = ua.indexOf("MSIE "); 
+ }
 
 
 
-    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer
+ tab_text=tab_text+"</table>";
 
-    {
+ tab_text= tab_text.replace(/<A[^>]*>|<\/A>/g, "");//remove if u want links in your table
 
-        txtArea1.document.open("txt/html","replace");
+ tab_text= tab_text.replace(/<img[^>]*>/gi,""); // remove if u want images in your table
 
-        txtArea1.document.write(tab_text);
-
-        txtArea1.document.close();
-
-        txtArea1.focus(); 
-
-        sa=txtArea1.document.execCommand("SaveAs",true,"Say Thanks to Sumit.xls");
-
-    }  
-
-    else                 //other browser not tested on IE 11
-
-        sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));  
+ tab_text= tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); // reomves input params
 
 
 
-    return (sa);
+ var ua = window.navigator.userAgent;
+
+ var msie = ua.indexOf("MSIE "); 
+
+
+
+ if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer
+
+ {
+
+     txtArea1.document.open("txt/html","replace");
+
+     txtArea1.document.write(tab_text);
+
+     txtArea1.document.close();
+
+     txtArea1.focus(); 
+
+     sa=txtArea1.document.execCommand("SaveAs",true,"Say Thanks to Sumit.xls");
+
+ }  
+
+ else                 //other browser not tested on IE 11
+
+     sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));  
+
+
+
+ return (sa);
 
 }
 
 </script>
-
 
 </body>
 

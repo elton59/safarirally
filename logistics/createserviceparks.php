@@ -43,9 +43,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -60,9 +60,9 @@ include("sidebar.php");
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-file-text-o"></i> Issue Awards</h3>
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> Create Service Parks</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="index.php">Home</a></li>
             
             </ol>
           </div>
@@ -75,38 +75,13 @@ include("sidebar.php");
               </header>
               <div class="panel-body">
                 <form class="form-horizontal " method="POST" action="process.php">
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">ServiceID</label>
-                    <div class="col-sm-10">
-                      <input  name="srid"type="text" class="form-control round-input" placeholder="input Service ID">
-                    </div>
-                  </div>
+                  
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Provider</label>
                     <div class="col-sm-10">
                       <input name="srp" type="year" class="form-control round-input" placeholder="input  Provider">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">RaceCarRegistrationNumber</label>
-                    <div class="col-sm-10">
-                      <input name="srcr" type="text" class="form-control round-input" placeholder="input  RaceCarRegistrationNumber">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">TeamTagNUmber</label>
-                    <div class="col-sm-10">
-                      <input  name="srttno" type="text" class="form-control round-input" placeholder="input TeamTagNUmber">
-                    </div>
-                 </div>
-                 <div class="form-group">
-                    <label class="col-sm-2 control-label">Driver_Email</label>
-                    <div class="col-sm-10">
-                      <input  name="dremail" type="text" class="form-control round-input" placeholder="input Driver Email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                    </div>
-                 </div>
-                
-                
                   <center>
                   <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="submit" name="asr" value="Create"/>
                    <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="reset" value="Cancel"/></center>
@@ -129,8 +104,8 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
         </div>
     </div>
   </section>

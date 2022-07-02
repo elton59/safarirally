@@ -43,9 +43,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -62,11 +62,72 @@ include("sidebar.php");
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-file-text-o"></i> Issue Awards</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="index.php">Home</a></li>
             
             </ol>
           </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+              <section class="panel">
+                <header class="panel-heading">
+                  Standings
+                </header>
+                <div class="table-responsive">
+                <table class="table-responsive table table-bordered" id="standing"> 
+                  <thead>
+                    <tr>
+                      <th>StandingID</th>
+                      <th>StandingDate</th>
+                      <th>TagNumber</th>
+                      <th>Driver</th>
+                      <th>CoDriverName</th>
+                      <th>Penalty</th>
+                      <th>Rewards</th>
+                      <th>Points</th>
+                     
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  <?php
+                  
+                  $totalpoints=$mysqli->query("SELECT SUM(reward) AS totalpoints FROM standings group by tagnumber");
+                  while($row2=$totalpoints->fetch_assoc())
+                  {
+                    $zae=$row2['totalpoints'];
+                  }
+                  ;
+                    $result=$mysqli->query("SELECT standings.*,team.drivername,team.codrivername
+                    FROM standings  JOIN team ON team.teamtagnumber=standings.tagnumber  order by standings.eventid")or die($mysqli->error);
+                    while($row=$result->fetch_assoc())
+                    {
+                      echo
+
+                      "
+                      <tbody>
+                      <td>".$row['id']."</td>
+                      <td>".$row['standingdate']."</td>
+                      <td>".$row['tagnumber']."</td>
+                      <td>".$row['drivername']."</td>
+                      <td>".$row['codrivername']."</td>
+                      <td>".$row['addpoint']."</td>
+                      <td>".$row['penalty']."</td>
+                      <td>".$row['reward']."</td>
+                   
+                   
+                    
+                    </tbody>
+                      "
+                    ;}
+              ?>
+      
+                </table>
+                <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
+                    </div>
+              </section>
+            </div>
+          </div>
         <div class="row">
           <div class="col-lg-12">
             <section class="panel">
@@ -142,8 +203,8 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
         </div>
     </div>
   </section>

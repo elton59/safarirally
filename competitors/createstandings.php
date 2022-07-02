@@ -43,14 +43,25 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
 <body>
+  <?php
+$dsunguch=$login_session;
+    $result=$mysqli->query("select * from driverdetails where email='$dsunguch'")or die($mysqli->error);
+    while($row=$result->fetch_assoc())
+    {
+     
 
+      
+     
+      $dfname=$row['fullname'];
+    }
+   ?>
   <!-- container section start -->
   <section id="container" class="">
   
@@ -62,7 +73,7 @@ include("sidebar.php");
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-file-text-o"></i> Create Standings</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="main.php">Home</a></li>
             
             </ol>
           </div>
@@ -76,12 +87,7 @@ include("sidebar.php");
               <div class="panel-body">
                 <form class="form-horizontal " method="POST" action="process.php">
                
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">StandingID</label>
-                    <div class="col-sm-10">
-                      <input  name="stid"type="text" class="form-control round-input" placeholder="input Standing ID">
-                    </div>
-                  </div>
+                 
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Standing Date</label>
                     <div class="col-sm-10">
@@ -94,30 +100,8 @@ include("sidebar.php");
                       <input name="sttno" type="number" class="form-control round-input" placeholder="input  Tag Number ">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">DriverID</label>
-                    <div class="col-sm-10">
-                      <input  name="stdid" type="text" class="form-control round-input" placeholder="input DriverID">
-                    </div>
-                 </div>
-                 <div class="form-group">
-                    <label class="col-sm-2 control-label">DriverName</label>
-                    <div class="col-sm-10">
-                      <input  name="stdname" type="text" class="form-control round-input" placeholder="input  DriverName">
-                    </div>
-</div>
-                 <div class="form-group">
-                    <label class="col-sm-2 control-label">CoDriverName</label>
-                    <div class="col-sm-10">
-                      <input  name="stcodname" type="text" class="form-control round-input" placeholder="input  CoDriverName">
-                    </div>
-                    </div>
-                    <div class="form-group">
-                    <label class="col-sm-2 control-label">CompletionTime </label>
-                    <div class="col-sm-10">
-                      <input  name="stcot" type="text" class="form-control round-input" placeholder="input  CompletionTime">
-                    </div>
-                  </div>
+                 
+               
                   <div class="form-group">
                     <label class="col-sm-2 control-label">EventID </label>
                     <div class="col-sm-10">
@@ -165,8 +149,8 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
         </div>
     </div>
   </section>

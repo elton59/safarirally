@@ -21,7 +21,7 @@
             <ul class="sub">
               <li><a class="" href="scheduleevent.php">Schedule Events</a></li>
               <li><a class="" href="viewevents.php">View Events</a></li>
-              <li><a class="" href="editevents.php">Edit Events</a></li>
+           
             </ul>
           </li>
           <li class="sub-menu">
@@ -31,9 +31,9 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="createfixture.php">Schedule Fixtures</a></li>
+              <li><a class="" href="viewevents.php">Schedule Fixtures</a></li>
               <li><a class="" href="viewfixtures.php">View Fixtures</a></li>
-              <li><a class="" href="editfixtures.php">Edit Fixtures</a></li>
+              <!-- <li><a class="" href="editfixtures.php">Edit Fixtures</a></li> -->
             </ul>
           </li>
           <li class="sub-menu">
@@ -43,9 +43,9 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="createstandings.php" href="createstandings.php">Create Standings</a></li>
-              <li><a class="viewstandings.php" href="viewstandings.php">View Standings</a></li>
-              <li><a class="editstandings.php" href="editstandings.php">Edit Standings</a></li>
+              
+             
+              <li><a class="editstandings.php" href="viewstandings.php">View Standings</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -55,9 +55,9 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="createawards.php">Creates Awards</a></li>
+            
               <li><a class="" href="viewawards.php">View Awards</a></li>
-              <li><a class="" href="editawards.php">Edit Awards</a></li>
+           
             </ul>
           </li>
           <li class="sub-menu">
@@ -67,9 +67,9 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="createserviceparks.php">Add Service Park</a></li>
+            <li><a class="" href="createserviceparks.php">Add Service Park</a></li>
               <li><a class="" href="viewserviceparks.php">view Service Park</a></li>
-              <li><a class="" href="editserviceparks.php">Edit Service Park</a></li>
+             
             </ul>
           </li>
 

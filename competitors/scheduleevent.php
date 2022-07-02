@@ -43,9 +43,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -62,7 +62,7 @@ include("sidebar.php");
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-file-text-o"></i> Shedule Event</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="main.php">Home</a></li>
               <li><i class="icon_document_alt"></i>view events</li>
               <li><i class="fa fa-file-text-o"></i>Edit events</li>
             </ol>
@@ -104,7 +104,7 @@ include("sidebar.php");
                  <div class="form-group">
                     <label class="col-sm-2 control-label">EventDate</label>
                     <div class="col-sm-10">
-                      <input  name="evdate" type="date" class="form-control round-input" placeholder="input event Datde">
+                      <input  name="evdate" type="date" class="form-control round-input" placeholder="input event Datde" min="<?php echo date('Y-m-d'); ?>>
                     </div>
                     </div>
                     <div class="form-group">
@@ -132,7 +132,7 @@ include("sidebar.php");
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Number Of Competitiors </label>
+                    <label class="col-sm-2 control-label">Number Of Competitors </label>
                     <div class="col-sm-10">
                       <input  name="evnoc" type="text" class="form-control round-input" placeholder="input event Number of Competitors">
                     </div>
@@ -177,8 +177,8 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
         </div>
     </div>
   </section>

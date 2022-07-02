@@ -14,7 +14,7 @@ include("sidebar.php");
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>view Teams</title>
+  <title>My Team</title>
 <!-- Bootstrap CSS -->
 <link href="../logistics/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
@@ -36,9 +36,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -51,7 +51,7 @@ include("sidebar.php");
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-table"></i> View Teams</h3>
+            <h3 class="page-header"><i class="fa fa-table"></i> My Team</h3>
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="main.php">Home</a></li>
             </ol>
@@ -62,7 +62,7 @@ include("sidebar.php");
           <div class="col-12">
             <section class="panel">
               <header class="panel-heading">
-                View Teams
+                My Team
               </header>
               <div class="table-responsive">
                <table class="table-responsive table table-bordered" id="teams">
@@ -71,7 +71,7 @@ include("sidebar.php");
                    
                     <th>TagNumber</th>
                     <th>DriverName</th>
-                    <th>CodDriverName</th>
+                    <th>Co-driver-Full name </th>
                     <th>RaceCarRegistrationNumber</th>  
                    
                   </tr>
@@ -79,7 +79,7 @@ include("sidebar.php");
                 <tbody>
 
                 <?php
-                  $result=$mysqli->query("select * from team")or die($mysqli->error);
+                  $result=$mysqli->query("select * from team where driver_email='$login_session'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
@@ -90,8 +90,7 @@ include("sidebar.php");
                     <td>".$row['drivername']."</td>
                     <td>".$row['codrivername']."</td>
                     <td>".$row['racecarregistrationnumber']."</td>
-                    <td> <a href='viewfixtures.php?apid=$row[id]' ><a>
-                   <a href='viewfixtures.php? rjid=$row[id]' ><a></td>
+                   
                    </tbody>
                     "
                   ;}
@@ -112,10 +111,10 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
-          &copy <a href="https://John elton okoth.com/">John elton okoth</a>
+          &copy <a href="https://paul waweru.com/">paul waweru</a>
         </div>
     </div>
   </section>

@@ -37,7 +37,7 @@
             <ul class="sub">
               <li><a class="" href="createpayments.php">Make Payment</a></li>
               <li><a class="" href="viewpayments.php">view Payments</a></li>
-              <li><a class="" href="editpayments.php">edit Payments</a></li>
+             
             </ul>
           </li>
          

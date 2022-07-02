@@ -40,9 +40,9 @@ include("sidebar.php");
   <link href="../logistics/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
   <!-- =======================================================
     Theme Name: NiceAdmin
-    Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-    Author: John elton okoth
-    Author URL: https://John elton okoth.com
+    Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+    Author: paul waweru
+    Author URL: https://paul waweru.com
   ======================================================= -->
 </head>
 <body>
@@ -77,29 +77,19 @@ include("sidebar.php");
                  
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">First Name</label>
+                    <label class="col-sm-2 control-label">Full Name</label>
                     <div class="col-sm-10">
-                      <input name="codfname" type="text" class="form-control round-input" placeholder="input First Name"minlength="2" maxlength="12">
+                      <input name="codfname" type="text" class="form-control round-input" placeholder="input Names"minlength="2" maxlength="20">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Second Name</label>
-                    <div class="col-sm-10">
-                      <input name="codlname" type="text" class="form-control round-input" placeholder="input Second Name"minlength="2" maxlength="12">
-                    </div>
-                  </div>
+                 
                   <div class="form-group">
                     <label class="col-sm-2 control-label">National ID No</label>
                     <div class="col-sm-10">
                       <input name="codnatid" type="text" class="form-control round-input" placeholder="input National ID"minlength="5" maxlength="12">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Team ID</label>
-                    <div class="col-sm-10">
-                      <input name="codtid" type="text" class="form-control round-input" placeholder="input Team ID" value="yet to be assigned" maxlength="12"minlength="5"disabled>
-                    </div>
-                  </div>
+                 
                   <div class="form-group">
 				
 				 <label class="col-sm-2 control-label">Select Nationality</label>
@@ -129,13 +119,23 @@ include("sidebar.php");
 				</div>
 			  </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">Email</label>
+                    <label class="col-sm-2 control-label">Co DriverEmail</label>
                     <div class="col-sm-10">
                     <input name="codemail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" class="form-control round-input" placeholder="input  Email" required   maxlength="32">
                     </div>
                   </div>
-                 
-        
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">DriverEmail</label>
+                    <div class="col-sm-10">
+                    <input name="drvemail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" class="form-control round-input" placeholder="input  Email" required  value="<?php  echo $login_session?>"  maxlength="32" readonly>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                  
+                    <div class="col-sm-10">
+                      <input name="codlname" type="hidden" value="null" class="form-control round-input" placeholder="input Second Name"minlength="2" maxlength="12">
+                    </div>
+                  </div>
                 
                   <center>
                   <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="submit" name="adcod" value="Create"/>
@@ -159,8 +159,8 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
         </div>
     </div>
   </section>

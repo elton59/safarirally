@@ -1,7 +1,7 @@
 <?php
 include("header.php");
 include("sidebar.php");
-include("recee_session.php")
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,9 +41,9 @@ include("recee_session.php")
   <link href="../logistics/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
   <!-- =======================================================
     Theme Name: NiceAdmin
-    Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-    Author: John elton okoth
-    Author URL: https://John elton okoth.com
+    Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+    Author: paul waweru
+    Author URL: https://paul waweru.com
   ======================================================= -->
 </head>
 <body>
@@ -59,7 +59,7 @@ include("recee_session.php")
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-file-text-o"></i> AddRecee car</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="viewracecar.php">viewRacecar</a></li>
+              <li><i class="fa fa-home"></i><a href="viewracecar.php">viewRececar</a></li>
             </ol>
             <ol class="breadcrumb">
             
@@ -73,95 +73,99 @@ include("recee_session.php")
             Register Recee Car
               </header>
               <div class="panel-body">
-                <form class="form-horizontal " method="POST" action="process.php">
+              <form class="form-horizontal " method="POST" action="process.php">
                
-                 <?php
-                 $racesession=$recee_session;
-                 ?>
+               <?php
+          
+               ?>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Make</label>
+                  <div class="col-sm-10">
+                    <input name="rmake" type="text" class="form-control round-input" placeholder="Make"minlength="5" maxlength="12">
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Make</label>
-                    <div class="col-sm-10">
-                      <input name="rmake" type="text" class="form-control round-input" placeholder="Make"minlength="5" maxlength="12">
-                    </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Model</label>
+                  <div class="col-sm-10">
+                    <input name="rmodel" type="text" class="form-control round-input" placeholder="input model"minlength="3" maxlength="12">
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Model</label>
-                    <div class="col-sm-10">
-                      <input name="rmodel" type="text" class="form-control round-input" placeholder="input model"minlength="3" maxlength="12">
-                    </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Year Of Manufucture</label>
+                  <div class="col-sm-10">
+                    <input name="ryear"  type="number" class="form-control round-input" placeholder="Year of Manufucture" minlength="4" maxlength="4 ">
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Year Of Manufucture</label>
-                    <div class="col-sm-10">
-                      <input name="ryear"  class="form-control round-input" placeholder="Year of Manufucture"minlength="4" maxlength="4">
-                    </div>
-                  </div>
-                 
-                  <div class="form-group">
-				
-				 <label class="col-sm-2 control-label">Country Of registration</label>
-         <div class="col-sm-10">
-				   <select name="rnat" class="form-control round-input" >
-           <option  class="form-control " value="none">(Choose county)  </option>
-					   <option  class="form-control " value="Kenya">Kenya</option>
-					   <option value="Egypt">Egypt</option>
-					   <option value="USA">USA</option>
-					   <optsssion value="India">India</option>
-					   <option value="Malasia">Malasia</option>
-					   <option value="Gabon">Gabon</option>
-					   <option value="Mali">Mali</option>
-				   </select>
-				 </div>
-			   </div>
-         <div class="form-group">
-                    <label class="col-sm-2 control-label">Registration Number</label>
-                    <div class="col-sm-10">
-                      <input name="rrno" type="text" class="form-control round-input" placeholder="input registation_number "maxlength="12"minlength="5" value="<?php echo  $racesession?>">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Number Of Doors</label>
-                    <div class="col-sm-10">
-                      <input name="rndo" type="text" class="form-control round-input" placeholder="input number of doors "maxlength="12"minlength="5">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">CC</label>
-                    <div class="col-sm-10">
-                      <input name="rcc" type="text" class="form-control round-input" placeholder="input CC "maxlength="12"minlength="2">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Chasis No</label>
-                    <div class="col-sm-10">
-                      <input name="rchasis" type="text" class="form-control round-input" placeholder="input Chasis"maxlength="12"minlength="5">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Engine NO</label>
-                    <div class="col-sm-10">
-                      <input name="rengno" type="text" class="form-control round-input" placeholder="input Engine No Number"maxlength="12"minlength="5">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Predominant Color</label>
-                    <div class="col-sm-10">
-                      <input name="rpdcolor" type="text" class="form-control round-input" placeholder="input predominant color Number"maxlength="12"minlength="5">
-                    </div>
-                  </div>
-
-                  <center>
-                  <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="submit" name="adrecar" value="Register"/>
-                   <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="reset" value="Cancel"/></center>
-                </form>
-              </div>
-            </section>
-         
-     
-          </div>
-        </div>
+                </div>
+               
+                <div class="form-group">
       
+       <label class="col-sm-2 control-label">Country Of registration</label>
+       <div class="col-sm-10">
+         <select name="rnat" class="form-control round-input" >
+         <option  class="form-control " value="none">(Choose county)  </option>
+           <option  class="form-control " value="Kenya">Kenya</option>
+           <option value="Egypt">Egypt</option>
+           <option value="USA">USA</option>
+           <optsssion value="India">India</option>
+           <option value="Malasia">Malasia</option>
+           <option value="Gabon">Gabon</option>
+           <option value="Mali">Mali</option>
+         </select>
+       </div>
+       </div>
+       <div class="form-group">
+                  <label class="col-sm-2 control-label">Registration Number</label>
+                  <div class="col-sm-10">
+                    <input name="rrno" type="text" class="form-control round-input" placeholder="input registation_number "maxlength="12"minlength="5" >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Number Of Doors</label>
+                  <div class="col-sm-10">
+                    <input name="rndo" type="text" class="form-control round-input" placeholder="input number of doors "maxlength="1"minlength="1">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">CC</label>
+                  <div class="col-sm-10">
+                    <input name="rcc" type="text" class="form-control round-input" placeholder="input CC "maxlength="4"minlength="2">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Chasis No</label>
+                  <div class="col-sm-10">
+                    <input name="rchasis" type="text" class="form-control round-input" placeholder="input Chasis"maxlength="12"minlength="5">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Engine NO</label>
+                  <div class="col-sm-10">
+                    <input name="rengno" type="text" class="form-control round-input" placeholder="input Engine No Number"maxlength="12"minlength="5">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Predominant Color</label>
+                  <div class="col-sm-10">
+                    <input name="rpdcolor" type="text" class="form-control round-input" placeholder="input predominant color Number"maxlength="12"minlength="3">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">DriverEmail</label>
+                  <div class="col-sm-10">
+                  <input name="drvemail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" class="form-control round-input" placeholder="input  Email" required  value="<?php  echo $login_session?>"  maxlength="32" readonly>
+                  </div>
+                </div>
+                <center>
+                <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="submit" name="adrecar" value="Register"/>
+                 <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="reset" value="Cancel"/></center>
+              </form>
+            </div>
+          
+       
+   
+        </div>
+      </div>
     
 
         <!-- page end-->
@@ -173,8 +177,8 @@ include("recee_session.php")
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
         </div>
     </div>
   </section>

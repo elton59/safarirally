@@ -37,9 +37,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -54,7 +54,7 @@ include("sidebar.php");
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-table"></i> Fixtures</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="main.php">Home</a></li>
             </ol>
           </div>
         </div>
@@ -69,37 +69,48 @@ include("sidebar.php");
                <table class="table-responsive table table-bordered" id="fixtures">
                 <thead>
                   <tr>
-                    <th>ScheduleID</th>
-                    <th>RaceDate</th>
-                    <th>Number Of Participants</th>
-                    <th>Team Tag Number</th>
+                 
+                    <th>EventName</th>
                     <th>Stage</th>
                     <th>Starting Point</th>
                     <th>Fuelling Point</th>
                     <th>Ending Point</th>
-                   
+                   <th>Race Date</th>
+                
                   </tr>
                 </thead>
                 <tbody>
 
                 <?php
-                  $result=$mysqli->query("select * from schedule")or die($mysqli->error);
+             
+               $result2 = $mysqli -> query("select eventid from eventdetail where driver_email='$login_session'");
+         
+               // Fetch all
+               while($row2=$result2->fetch_array())
+               {
+                $c=[];
+                 $c=$row2['eventid'];
+               }
+               // Free result set
+               
+         
+               
+                  $result=$mysqli->query("SELECT schedule.*
+                  FROM schedule  JOIN eventdetail ON eventdetail.eventid = schedule.schedueid where eventdetail.driver_email='$login_session'  order by  eventdetail.eventid ")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
 
                     "
                     <tbody>
-                    <td>".$row['schedueid']."</td>
-                    <td>".$row['racedate']."</td>
-                    <td>".$row['numberofparticipants']."</td>
-                    <td>".$row['teamtagnumber']."</td>
+                    <td>".$row['eventname']."</td>    
                     <td>".$row['stage']."</td>
                     <td>".$row['startingpoint']."</td>
                     <td>".$row['fuellingpoint']."</td>
                     <td>".$row['endingpoint']."</td>
-                   <td> <a href='viewfixtures.php?apid=$row[id]' ><a>
-                   <a href='viewfixtures.php? rjid=$row[id]' ><a></td>
+                    <td>".$row['racedate']."</td>
+                 
+                 
                    </tbody>
                     "
                   ;}
@@ -120,10 +131,10 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
-          &copy <a href="https://John elton okoth.com/">John elton okoth</a>
+          &copy <a href="https://paul waweru.com/">paul waweru</a>
         </div>
     </div>
   </section>

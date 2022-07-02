@@ -45,9 +45,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -76,7 +76,7 @@ include("sidebar.php");
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-file-text-o"></i> Shedule Event</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="index.php">Home</a></li>
               <li><i class="icon_document_alt"></i>view events</li>
               <li><i class="fa fa-file-text-o"></i>Edit events</li>
             </ol>
@@ -92,9 +92,9 @@ include("sidebar.php");
                 <form class="form-horizontal " method="POST" action="process.php">
                
                   <div class="form-group">
-                    <label class="col-sm-2 control-label">EventID</label>
+                   
                     <div class="col-sm-10">
-                      <input  name="evid"type="text" class="form-control round-input" placeholder="input event ID">
+                      <input  type="hidden" name="evid"type="text" class="form-control round-input" placeholder="input event ID" value="null">
                     </div>
                   </div>
                   <div class="form-group">
@@ -123,8 +123,8 @@ include("sidebar.php");
                     </div>
                     <div class="form-group">
                     <label class="col-sm-2 control-label">End Date </label>
-                    <div class="col-sm-10"  min="<?php echo date('Y-m-d') ?>">
-                      <input  name="evdue" type="date" class="form-control round-input" placeholder="input event Duration">
+                    <div class="col-sm-10"  >
+                      <input  name="evdue" type="date" class="form-control round-input" placeholder="input event Duration" min="<?php echo date('Y-m-d') ?>" >
                     </div>
                   </div>
                   <div class="form-group">
@@ -132,34 +132,7 @@ include("sidebar.php");
                     <div class="col-sm-10">
                       <input  name="evven" type="text" class="form-control round-input" placeholder="input event Venue">
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Number Of Competitiors </label>
-                    <div class="col-sm-10">
-                      <input  name="evnoc" type="text" class="form-control round-input" placeholder="input event Number of Competitors">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                  
-                    <div class="col-sm-10">
-                    <input type="hidden" name="evttno" id="id2" value="<?php echo ($teamtno);?>" class="form-control round-input"  readonly placeholder="input event Team Tag Number" />
-                   
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">ScheduleID </label>
-                    <div class="col-sm-10">
-                      <input  name="evschid" type="text" class="form-control round-input" placeholder="input event Schedule ID">
-                    </div>
-                  </div>
-                  
-
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">AWard ID</label>
-                    <div class="col-sm-10">
-                      <input  name="evawid" type="text" class="form-control round-input" placeholder="input event AwardID">
-                    </div>
-                  </div>
+                  </div>                
                   <center>
                   <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="submit" name="schev" value="Schedule" id="update" />
                    <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="reset" value="Cancel"/></center>
@@ -182,8 +155,8 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
         </div>
     </div>
   </section>

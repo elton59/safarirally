@@ -2,6 +2,8 @@
 include("conn.php");
 include("header.php");
 include("sidebar.php");
+include('session.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +17,8 @@ include("sidebar.php");
   <link rel="shortcut icon" href="img/favicon.png">
 
   <title>view Payments</title>
-<!-- Bootstrap CSS -->
+
+  <!-- Bootstrap CSS -->
 <link href="../logistics/css/bootstrap.min.css" rel="stylesheet">
   <!-- bootstrap theme -->
   <link href="../logistics/css/bootstrap-theme.css" rel="stylesheet">
@@ -36,9 +39,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -51,7 +54,7 @@ include("sidebar.php");
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-table"></i> View Payments</h3>
+            <h3 class="page-header"><i class="fa fa-table"></i> Events</h3>
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="main.php">Home</a></li>
             </ol>
@@ -62,55 +65,76 @@ include("sidebar.php");
           <div class="col-12">
             <section class="panel">
               <header class="panel-heading">
-                View Payments
+              View Payments
               </header>
               <div class="table-responsive">
-               <table class="table-responsive table table-bordered" id="payments">
+               <table class="table-responsive table table-bordered" id="events">
                 <thead>
                   <tr>
-                    <th>TransactionID</th>
-                    <th>AccountName</th>
-                    <th>AmountPaid</th>
-                    <th>PaymentFor</th>
-                    <th>UserCategory</th>
-                    <th>PaymentDate</th>
-                    <th>Statud</th>
-                   
-                   
+                  <th>ID</th>
+                    <th>Account Name</th>
+                    <th>Driver Email</th>
+                    <th>Payment Date</th>
+                    <th>Transaction <i class="fa fa-id-badge" aria-hidden="true"></i></th>
+                    <th>Amount</th>
+                    <th>Status</th>
+         
                   </tr>
                 </thead>
                 <tbody>
-
                 <?php
-                 $sunguch=$login_session;
-                  $result=$mysqli->query("select * from paymentdetails")or die($mysqli->error);
+                  $result=$mysqli->query("select * from eventdetail where driver_email !='noinput' and payment_status!='nopay'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
 
                     "
                     <tbody>
-                    <td>".$row['transactiontid']."</td>
-                    <td>".$row['accountname']."</td>
-                    <td>".$row['amountpaid']."</td>
-                    <td>".$row['paymentfor']."</td>
-                    <td>".$row['usercategory']."</td>
-                    <td>".$row['paymentdate']."</td>
-                    <td>".$row['status']."</td>
- 
-                    <td> <a href='process.php?apbut=$row[id]' class='btn btn-primary' >Approve<a>
-                   <a href='process.php? rjbut=$row[id]' class='btn btn-danger'>Reject<a></td>
+                    <td>".$row['id']."</td>
+                    <td>".$row['drivername']."</td>
+                    <td>".$row['driver_email']."</td>
+                    <td>".$row['payment_date']."</td>
+                    <td>".$row['transaction_id']."</td>
+                    <td>".$row['amount']."</td>
+                    <td>".$row['payment_status']."</td>
+                      <td> <a href='viewpayments.php?bpid=$row[id]' class='btn btn-success' >Approve</a>
+                     </td>
+                     <td> <a href='viewpayments.php?rbpid=$row[id]' class='btn btn-danger' >Reject</a>
+                     </td>
                    </tbody>
                     "
                   ;}
             ?>
+                </tbody>
+                <?php
+              
+                //book event
+if (isset($_GET['bpid'])) {
+  $id=$_GET['bpid'];
+  $a='payment_approved';
+ 
+  $result=$mysqli->query("update eventdetail set payment_status='$a' where id='$id'")or die($mysqli->error);
+  
+    echo"<script>window.location.replace('viewpayments.php')</script>";
+  }
+  if (isset($_GET['rbpid'])) {
+    $b='payment_rejected';
+    $id=$_GET['rbpid'];
+    $result=$mysqli->query("update eventdetail set payment_status='$b' where id='$id'")or die($mysqli->error);
     
+      echo"<script>window.location.replace('viewpayments.php')</script>";
+    }
+
+
+?>
+
               </table>
               <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
                   </div>
             </section>
           </div>
         </div>
+
         <!-- page end-->
       </section>
     </section>
@@ -120,22 +144,23 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
-          &copy <a href="https://John elton okoth.com/">John elton okoth</a>
+          &copy <a href="https://paul waweru.com/">paul waweru</a>
         </div>
     </div>
   </section>
   <!-- container section end -->
-  <!-- javascripts -->
-  <script src="../logistics/js/jquery.js"></script>
+   <!-- javascripts -->
+   <script src="../logistics/js/jquery.js"></script>
   <script src="../logistics/js/bootstrap.min.js"></script>
   <!-- nicescroll -->
   <script src="../logistics/js/jquery.scrollTo.min.js"></script>
   <script src="../logistics/js/jquery.nicescroll.js" type="text/javascript"></script>
   <!--custome script for all page-->
   <script src="../logistics/js/scripts.js"></script>
+
   <script type="text/javascript">
 
 function fnExcelReport()
@@ -146,7 +171,7 @@ function fnExcelReport()
 
  var textRange; var j=0;
 
- tab = document.getElementById('payments'); // id of table
+ tab = document.getElementById('events'); // id of table
 
 
 

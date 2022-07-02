@@ -1,10 +1,12 @@
 <?php
 
-$servername = "127.0.0.1";
+
+
+
+$servername ="localhost";
 $username = "root";
 $password = "";
 $db = "safarirally";
-
 // Create connection
 $mysqli =new mysqli($servername, $username, $password,$db)or die(mysqli_error($mysqli));
 
@@ -16,23 +18,18 @@ if (!$mysqli) {
 //scheduling events
 if(isset($_POST['schev']))
 {
-  $evdr=$_POST['evdr'];
-  $evcod=$_POST['evcod'];
-   $evschid=$_POST['evschid'];
+
+
    $evname=$_POST['evname'];
-   $evid=$_POST['evid'];
    $evspon=$_POST['evspon'];
    $evorg=$_POST['evorg'];
    $evdate=$_POST['evdate'];
    $evdue=$_POST['evdue'];
    $evven=$_POST['evven'];
-   $evnoc=$_POST['evnoc'];
-   $evttno=$_POST['evttno'];
-   $evawid=$_POST['evawid'];
 
         
           
-           $sql=$mysqli->query("INSERT INTO eventdetail(eventid,eventname,sponsor,organizer,eventdate,duration,venue,numberofcompetitiors,teamtagnumber,scheduleid,awardid,drivername,codrivername) VALUES('$evid','$evname','$evspon','$evorg','$evdate','$evdue','$evven','$evnoc','$evttno','$evschid','$evawid','$evcod','$evdr')") or die($mysqli->error);
+           $sql=$mysqli->query("INSERT INTO eventdetail(eventname,sponsor,organizer,eventdate,duration,venue) VALUES('$evname','$evspon','$evorg','$evdate','$evdue','$evven')") or die($mysqli->error);
            if($sql){
      
      echo "<script>alert('record added successfully');
@@ -67,7 +64,7 @@ if(isset($_POST['schev']))
  
          
            
-            $sql=$mysqli->query("UPDATE eventdetail SET eventid='$evid',eventname='$evname',sponsor='$evspon',organizer='$evorg',eventdate='$evdate',duration='$evdue',venue='$evven',numberofcompetitiors='$evnoc',teamtagnumber='$evttno',scheduleid='$evschid',awardid='$evawid' where id='$upid'") or die($mysqli->error);
+            $sql=$mysqli->query("UPDATE eventdetail SET eventid='$evid',eventname='$evname',sponsor='$evspon',organizer='$evorg',eventdate='$evdate',duration='$evdue',venue='$evven',numberofcompetitors='$evnoc',teamtagnumber='$evttno',scheduleid='$evschid',awardid='$evawid' where id='$upid'") or die($mysqli->error);
             if($sql){
       
       echo "<script>alert('record Update successfully');
@@ -109,15 +106,15 @@ if(isset($_POST['schef']))
 {
    $schid=$_POST['schid'];
    $schrdate=$_POST['schrdate'];
-   $schnop=$_POST['schnop'];
+
    $schttno=$_POST['schttno'];
    $schstage=$_POST['schstage'];
    $schst=$_POST['schst'];
    $schfl=$_POST['schfl'];
    $schend=$_POST['schend'];
- 
+   $schevname=$_POST['schevname'];
 
-           $sql=$mysqli->query("INSERT INTO schedule(schedueid,racedate,numberofparticipants,teamtagnumber,stage,startingpoint,fuellingpoint,endingpoint) VALUES('$schid','$schrdate','$schnop','$schttno','$schstage','$schst','$schfl','$schend')") or die($mysqli->error);
+           $sql=$mysqli->query("INSERT INTO schedule(schedueid,racedate,teamtagnumber,stage,startingpoint,fuellingpoint,endingpoint,eventname) VALUES('$schid','$schrdate','$schttno','$schstage','$schst','$schfl','$schend','$schevname')") or die($mysqli->error);
            if($sql){
      
      echo "<script>alert('record added successfully');
@@ -209,20 +206,16 @@ else
 
 if(isset($_POST['cst']))
 {
-  $stid=$_POST['stid'];
+  
   $stdate=$_POST['stdate'];
   $sttno=$_POST['sttno'];
-  $stdid=$_POST['stdid'];
-  $stdname=$_POST['stdname'];
-  $stcodname=$_POST['stcodname'];
-  $stcot=$_POST['stcot'];
   $steid=$_POST['steid'];
   $stpen=$_POST['stpen'];
   $strew=$_POST['strew'];
-  $stpoint=$_POST['stpoint'];
- 
+  $fid=$_POST['fid'];
+  $evname=$_POST['evname'];
 
-           $sql=$mysqli->query("INSERT INTO standings(standingid,standingdate,tagnumber,driverid,drivername,codrivername,completiontime,eventid,penalty,reward,points) VALUES('$stid','$stdate','$sttno','$stdid','$stdname','$stcodname','$stcot','$steid','$stpen','$strew','$stpoint')") or die($mysqli->error);
+           $sql=$mysqli->query("INSERT INTO standings(standingdate,tagnumber,eventid,penalty,addpoint,fixtureid,eventname) VALUES('$stdate','$sttno','$steid','$stpen','$strew','$fid','$evname')") or die($mysqli->error);
            if($sql){
      
      echo "<script>alert('record added successfully');
@@ -299,7 +292,7 @@ else
 
 if(isset($_POST['awd']))
 {
-  $awid=$_POST['awid'];
+
   $awyr=$_POST['awyr'];
   $awename=$_POST['awename'];
   $awttno=$_POST['awttno'];
@@ -309,7 +302,7 @@ if(isset($_POST['awd']))
   $awdname=$_POST['awdname'];
  
 
-           $sql=$mysqli->query("INSERT INTO award(awardid,year,eventname,teamtagnumber,drivername,amount,codrivername) VALUES('$awid','$awyr','$awename','$awttno','$awdname','$awamount','$awcodname')") or die($mysqli->error);
+           $sql=$mysqli->query("INSERT INTO award(year,eventname,teamtagnumber,drivername,amount,codrivername) VALUES('$awyr','$awename','$awttno','$awdname','$awamount','$awcodname')") or die($mysqli->error);
            if($sql){
      
      echo "<script>alert('record added successfully');
@@ -383,13 +376,10 @@ else
 
 if(isset($_POST['asr']))
 {
-  $srid=$_POST['srid'];
+ 
   $srp=$_POST['srp'];
-  $srcr=$_POST['srcr'];
-  $srttno=$_POST['srttno'];
-  $srttno=$_POST['srttno'];
-  $dremail=$_POST['dremail']; 
-  $sql=$mysqli->query("INSERT INTO service(driveremail,serviceid,provider,racecarregistrationnumber,teamtagnumber) VALUES('$dremail','$srid','$srp','$srcr','$srttno')") or die($mysqli->error);
+
+  $sql=$mysqli->query("INSERT INTO providers(provider) VALUES('$srp')") or die($mysqli->error);
            if($sql){
      
      echo "<script>alert('record added successfully');

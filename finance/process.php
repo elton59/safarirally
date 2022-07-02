@@ -1,10 +1,12 @@
 <?php
 
-$servername = "127.0.0.1";
+
+
+
+$servername ="localhost";
 $username = "root";
 $password = "";
 $db = "safarirally";
-
 // Create connection
 $mysqli =new mysqli($servername, $username, $password,$db)or die(mysqli_error($mysqli));
 
@@ -66,7 +68,7 @@ if(isset($_POST['schev']))
 
         
           
-           $sql=$mysqli->query("INSERT INTO eventdetail(eventid,eventname,sponsor,organizer,eventdate,duration,venue,numberofcompetitiors,teamtagnumber,scheduleid,awardid) VALUES('$evid','$evname','$evspon','$evorg','$evdate','$evdue','$evven','$evnoc','$evttno','$evschid','$evawid')") or die($mysqli->error);
+           $sql=$mysqli->query("INSERT INTO eventdetail(eventid,eventname,sponsor,organizer,eventdate,duration,venue,numberofcompetitors,teamtagnumber,scheduleid,awardid) VALUES('$evid','$evname','$evspon','$evorg','$evdate','$evdue','$evven','$evnoc','$evttno','$evschid','$evawid')") or die($mysqli->error);
            if($sql){
      
      echo "<script>alert('record added successfully');
@@ -100,7 +102,7 @@ if(isset($_POST['schev']))
  
          
            
-            $sql=$mysqli->query("UPDATE eventdetail SET eventid='$evid',eventname='$evname',sponsor='$evspon',organizer='$evorg',eventdate='$evdate',duration='$evdue',venue='$evven',numberofcompetitiors='$evnoc',teamtagnumber='$evttno',scheduleid='$evschid',awardid='$evawid' where id='$upid'") or die($mysqli->error);
+            $sql=$mysqli->query("UPDATE eventdetail SET eventid='$evid',eventname='$evname',sponsor='$evspon',organizer='$evorg',eventdate='$evdate',duration='$evdue',venue='$evven',numberofcompetitors='$evnoc',teamtagnumber='$evttno',scheduleid='$evschid',awardid='$evawid' where id='$upid'") or die($mysqli->error);
             if($sql){
       
       echo "<script>alert('record Update successfully');
@@ -221,34 +223,34 @@ else
 
 if(isset($_POST['cst']))
 {
-  $stid=$_POST['stid'];
-  $stdate=$_POST['stdate'];
-  $sttno=$_POST['sttno'];
-  $stdid=$_POST['stdid'];
-  $stdname=$_POST['stdname'];
-  $stcodname=$_POST['stcodname'];
-  $stcot=$_POST['stcot'];
-  $steid=$_POST['steid'];
-  $stpen=$_POST['stpen'];
-  $strew=$_POST['strew'];
-  $stpoint=$_POST['stpoint'];
+  // $stid=$_POST['stid'];
+  // $stdate=$_POST['stdate'];
+  // $sttno=$_POST['sttno'];
+  // $stdid=$_POST['stdid'];
+  // $stdname=$_POST['stdname'];
+  // $stcodname=$_POST['stcodname'];
+  // $stcot=$_POST['stcot'];
+  // $steid=$_POST['steid'];
+  // $stpen=$_POST['stpen'];
+  // $strew=$_POST['strew'];
+  // $stpoint=$_POST['stpoint'];
  
+  // $sql=$mysqli->query("INSERT INTO award(awardid,year,eventname,teamtagnumber,drivername,amount,codrivername) VALUES('$awid','$awyr','$awename','$awttno','$awdname','$awamount','$awcodname')") or die($mysqli->error);
+  // if($sql){
 
-           $sql=$mysqli->query("INSERT INTO standings(standingid,standingdate,tagnumber,driverid,drivername,codrivername,completiontime,eventid,penalty,reward,points) VALUES('$stid','$stdate','$sttno','$stdid','$stdname','$stcodname','$stcot','$steid','$stpen','$strew','$stpoint')") or die($mysqli->error);
-           if($sql){
      
-     echo "<script>alert('record added successfully');
-       window.location.replace('viewstandings.php');
+  //    echo "<script>alert('record added successfully');
+  //      window.location.replace('viewstandings.php');
 
-           </script>";
+  //          </script>";
 
-   }
-   else
-   {
-     echo "<script><alert>(' failed');
-           window.location.replace('createstandings.php');
-           </script>";
-   }
+  //  }
+  //  else
+  //  {
+  //    echo "<script><alert>(' failed');
+  //          window.location.replace('createstandings.php');
+  //          </script>";
+  //  }
  }
 
  //edit Standings
@@ -1248,31 +1250,26 @@ if(isset($_POST['ufd']))
    }
  }
  //create feedback
-if(isset($_POST['cfd']))
-{
- 
-   $fdemail=$_POST['fdemail'];
-   $fdmessage=$_POST['fdmessage'];
- ;
-  
- 
+if (isset($_POST['cfd'])) {
+  $fdremail = $_POST['fdremail'];
+  $fdsemail = $_POST['fdsemail'];
+  $fdmessage = $_POST['fdmessage'];;
 
-           $sql=$mysqli->query("INSERT INTO feedback (email,message) values('$fdemail','$fdmessage')") or die($mysqli->error);
-           if($sql){
-     
-     echo "<script>alert('record added successfully');
-       window.location.replace('feedback.php');
+
+
+  $sql = $mysqli->query("INSERT INTO feedback (receiver,email,message) values('$fdsemail','$fdremail','$fdmessage')") or die($mysqli->error);
+  if ($sql) {
+
+    echo "<script>alert('record added successfully');
+       window.location.replace('sentbox.php');
 
            </script>";
-
-   }
-   else
-   {
-     echo "<script><alert>(' failed');
-           window.location.replace('feedback.php');
+  } else {
+    echo "<script><alert>(' failed');
+           window.location.replace('createfeedback.php');
            </script>";
-   }
- }
+  }
+}
 
 //feedbackbuttons
 

@@ -11,8 +11,8 @@ include("session.php");
         <!--  search form start -->
         <ul class="nav top-menu">
           <li>
-            <form class="navbar-form">
-              <input class="form-control" placeholder="Search" type="text">
+            <form class="navbar-form" method='POST' action='search.php'>
+              <input class="form-control" name='searchr' placeholder="Search fixture" type="text">
             </form>
           </li>
         </ul>

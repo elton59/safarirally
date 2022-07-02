@@ -37,9 +37,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -50,71 +50,64 @@ include("sidebar.php");
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <div class="row">
-          <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-table"></i> Events</h3>
-            <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-            </ol>
-          </div>
-        </div>
-        <!-- page start-->
-        <div class="row">
+      <div class="row">
           <div class="col-12">
             <section class="panel">
               <header class="panel-heading">
-                Events
+       
               </header>
               <div class="table-responsive">
-               <table class="table-responsive table table-bordered" id="events">
+              <table class="table-responsive table table-bordered" id="events">
                 <thead>
                   <tr>
-                    <th>EventID</th>
-                    <th>EventName</th>
+                  
+                     
+                  <th>EventName</th>
                     <th>Sponsor</th>
                     <th>Organizer</th>
-                    <th>EventDate</th>
+                    <th>StartDate</th>
                     <th>Venue</th>
+                    <th>EndDate</th>
                     <th>Duration</th>
-                    <th>Numberofcompetitiors</th>
-                    <th>TeanTagNo</th>
-                    <th>ScheduleID</th>
-                    <th>AwardID</th>
+                  
+                   
+         
                   </tr>
                 </thead>
                 <tbody>
                 <?php
-                  $result=$mysqli->query("select * from eventdetail")or die($mysqli->error);
+                  $result=$mysqli->query("select * from eventdetail where status='approved'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
 
                     "
                     <tbody>
-                    <td>".$row['eventid']."</td>
+                  
                     <td>".$row['eventname']."</td>
                     <td>".$row['sponsor']."</td>
                     <td>".$row['organizer']."</td>
                     <td>".$row['eventdate']."</td>
                     <td>".$row['venue']."</td>
                     <td>".$row['duration']."</td>
-                    <td>".$row['numberofcompetitiors']."</td>
-                    <td>".$row['teamtagnumber']."</td>
-                    <td>".$row['scheduleid']."</td>
-                    <td>".$row['awardid']."</td>
-                   <td> <a href='viewevents.php?apid=$row[id]' ><a>
-                   <a href='viewevents.php? rjid=$row[id]' ><a></td>
+                    <td>".$row['nduration']."</td>
+                   
+                   
                    </tbody>
                     "
+            
                   ;}
             ?>
                 </tbody>
+                
               </table>
-              <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
+           <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
                   </div>
             </section>
           </div>
         </div>
+        <!-- page start-->
+    
         <!-- page end-->
       </section>
     </section>
@@ -124,10 +117,10 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
-          &copy <a href="https://John elton okoth.com/">John elton okoth</a>
+          &copy <a href="https://paul waweru.com/">paul waweru</a>
         </div>
     </div>
   </section>
@@ -140,7 +133,6 @@ include("sidebar.php");
   <script src="../logistics/js/jquery.nicescroll.js" type="text/javascript"></script>
   <!--custome script for all page-->
   <script src="../logistics/js/scripts.js"></script>
-
   <script type="text/javascript">
 
 function fnExcelReport()
@@ -210,6 +202,7 @@ function fnExcelReport()
 }
 
 </script>
+
 
 </body>
 

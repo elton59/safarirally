@@ -43,9 +43,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -62,11 +62,89 @@ include("sidebar.php");
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-file-text-o"></i> Issue Awards</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="index.php">Home</a></li>
             
             </ol>
           </div>
         </div>
+        <div class="row">
+            <div class="col-12">
+              <section class="panel">
+                <header class="panel-heading">
+                  Standings
+                </header>
+                <div class="table-responsive">
+                <table class="table-responsive table table-bordered" id="standing"> 
+                  <thead>
+                    <tr>
+                      <th>StandingID</th>
+                      <th>EventName</th>
+                      <th>StandingDate</th>
+                      <th>TagNumber</th>
+                      <th>Driver</th>
+                      <th>CoDriverName</th>
+                      <th>Points</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  <?php
+                  
+                  $totalpoints=$mysqli->query("SELECT SUM(reward) AS totalpoints FROM standings group by tagnumber");
+                  while($row2=$totalpoints->fetch_assoc())
+                  {
+                    $zae=$row2['totalpoints'];
+                  }
+                  ;
+                    $result=$mysqli->query("SELECT standings.*,team.drivername,team.codrivername
+                    FROM standings  JOIN team ON team.teamtagnumber=standings.tagnumber  group by  team.teamtagnumber order by (SELECT SUM(reward) AS totalpoints) desc limit 3")or die($mysqli->error);
+                    while($row=$result->fetch_assoc())
+                    {
+                      echo
+
+                      "
+                      <tbody>
+                      <td>".$row['id']."</td>
+                      <td>".$row['eventname']."</td>
+                      <td>".$row['standingdate']."</td>
+                      <td>".$row['tagnumber']."</td>
+                      <td>".$row['drivername']."</td>
+                      <td>".$row['codrivername']."</td>
+                      <td>".$zae."</td>
+                      <td>".$row['status']."</td>
+                      <td> <a href='createawards.php?awid=$row[id]' class='btn btn-info' >Award</a>
+                      </td>
+                     
+                    
+                    </tbody>
+                      "
+                    ;}
+              ?>
+      
+                </table>
+                <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
+                    </div>
+                    <?php
+        if (isset($_GET['awid'])) {
+  $email=$login_session;
+  
+  $id = $_GET['awid'];
+  $sql = $mysqli->query("SELECT standings.*,team.drivername,team.codrivername
+  FROM standings  JOIN team ON team.teamtagnumber=standings.tagnumber where standings.id='$id'") or die($mysqli->error);
+  $row=$sql->fetch_assoc();
+  $tag=$row['tagnumber'];
+  $evname=$row['eventname'];
+  $dname=$row['drivername'];
+  $codname=$row['codrivername'];
+  
+  
+}
+
+?>     
+              </section>
+            </div>
+          </div>
         <div class="row">
           <div class="col-lg-12">
             <section class="panel">
@@ -76,40 +154,35 @@ include("sidebar.php");
               <div class="panel-body">
                 <form class="form-horizontal " method="POST" action="process.php">
                
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">AwardID</label>
-                    <div class="col-sm-10">
-                      <input  name="awid"type="text" class="form-control round-input" placeholder="input Award ID">
-                    </div>
-                  </div>
+              
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Year</label>
                     <div class="col-sm-10">
-                      <input name="awyr" type="year" class="form-control round-input" placeholder="input  Year">
+                      <input name="awyr" value="<?php echo date("Y")?>" class="form-control round-input" placeholder="input  Year">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">Event Name</label>
                     <div class="col-sm-10">
-                      <input name="awename" type="text" class="form-control round-input" placeholder="input  Event Name">
+                      <input name="awename" type="text" class="form-control round-input" placeholder="input  Event Name" value="<?php echo $evname?>">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label">TeamTagNUmber</label>
                     <div class="col-sm-10">
-                      <input  name="awttno" type="text" class="form-control round-input" placeholder="input TeamTagNUmber">
+                      <input  name="awttno" type="text" class="form-control round-input" placeholder="input TeamTagNUmber"  value="<?php echo $tag?>">
                     </div>
                  </div>
                  <div class="form-group">
                     <label class="col-sm-2 control-label">DriverName</label>
                     <div class="col-sm-10">
-                      <input  name="awdname" type="text" class="form-control round-input" placeholder="input  DriverName">
+                      <input  name="awdname" type="text" class="form-control round-input" placeholder="input  DriverName"  value="<?php echo $dname?>">
                     </div>
 </div>
                  <div class="form-group">
                     <label class="col-sm-2 control-label">CoDriverName</label>
                     <div class="col-sm-10">
-                      <input  name="awcodname" type="text" class="form-control round-input" placeholder="input  CoDriverName">
+                      <input  name="awcodname" type="text" class="form-control round-input" placeholder="input  CoDriverName"  value="<?php echo $codname?>">
                     </div>
                     </div>
                     <div class="form-group">
@@ -142,8 +215,8 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
         </div>
     </div>
   </section>

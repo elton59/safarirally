@@ -1,6 +1,9 @@
 <?php
 
-$servername = "127.0.0.1";
+
+
+
+$servername ="localhost";
 $username = "root";
 $password = "";
 $db = "safarirally";
@@ -14,7 +17,7 @@ if (!$mysqli) {
 
 //scheduling events
 if (isset($_POST['schev'])) {
-  $evschid = $_POST['evschid'];
+ 
   $evname = $_POST['evname'];
   $evid = $_POST['evid'];
   $evspon = $_POST['evspon'];
@@ -22,19 +25,19 @@ if (isset($_POST['schev'])) {
   $evdate = $_POST['evdate'];
   $evdue = $_POST['evdue'];
   $evven = $_POST['evven'];
-  $evnoc = $_POST['evnoc'];
   $evttno = $_POST['evttno'];
-  $evawid = $_POST['evawid'];
+  $evdr = $_POST['evdr'];
+  $evcod = $_POST['evcod'];
+  $evdmail = $_POST['evdmail'];
 
 
-
-  $sql = $mysqli->query("INSERT INTO eventdetail(eventid,eventname,sponsor,organizer,eventdate,duration,venue,numberofcompetitiors,teamtagnumber,scheduleid,awardid) VALUES('$evid','$evname','$evspon','$evorg','$evdate','$evdue','$evven','$evnoc','$evttno','$evschid','$evawid')") or die($mysqli->error);
+  $sql = $mysqli->query("INSERT INTO eventdetail(eventid,eventname,sponsor,organizer,eventdate,duration,venue,teamtagnumber,drivername,codrivername,status,driver_email) VALUES('$evid','$evname','$evspon','$evorg','$evdate','$evdue','$evven','$evttno','$evdr','$evcod','booked','$evdmail')") or die($mysqli->error);
   if ($sql) {
 
-    echo "<script>alert('record added successfully');
+     echo "<script>alert('record added successfully');
        window.location.replace('viewevents.php');
 
-           </script>";
+          </script>";
   } else {
     echo "<script><alert>(' failed');
            window.location.replace('scheduleevent.php');
@@ -58,7 +61,7 @@ if (isset($_POST['uschev'])) {
 
 
 
-  $sql = $mysqli->query("UPDATE eventdetail SET eventid='$evid',eventname='$evname',sponsor='$evspon',organizer='$evorg',eventdate='$evdate',duration='$evdue',venue='$evven',numberofcompetitiors='$evnoc',teamtagnumber='$evttno',scheduleid='$evschid',awardid='$evawid' where id='$upid'") or die($mysqli->error);
+  $sql = $mysqli->query("UPDATE eventdetail SET eventid='$evid',eventname='$evname',sponsor='$evspon',organizer='$evorg',eventdate='$evdate',duration='$evdue',venue='$evven',numberofcompetitors='$evnoc',teamtagnumber='$evttno',scheduleid='$evschid',awardid='$evawid' where id='$upid'") or die($mysqli->error);
   if ($sql) {
 
     echo "<script>alert('record Update successfully');
@@ -313,7 +316,8 @@ if (isset($_POST['asr'])) {
   $srp = $_POST['srp'];
   $srcr = $_POST['srcr'];
   $srttno = $_POST['srttno'];
-  $sql = $mysqli->query("INSERT INTO service(serviceid,provider,racecarregistrationnumber,teamtagnumber) VALUES('$srid','$srp','$srcr','$srttno')") or die($mysqli->error);
+  $dremail = $_POST['dremail'];
+  $sql = $mysqli->query("INSERT INTO service(driveremail,serviceid,provider,racecarregistrationnumber,teamtagnumber,status) VALUES('$dremail','$srid','$srp','$srcr','$srttno','booked')") or die($mysqli->error);
   if ($sql) {
 
     echo "<script>alert('record added successfully');
@@ -526,13 +530,22 @@ if (isset($_POST['adr'])) {
   $drspon = $_POST['drspon'];
   $dremail = $_POST['dremail'];
   $drpass = $_POST['drpass'];
-  $sql = $mysqli->query("INSERT INTO driverdetails(national_id,fullname,lincensenumber,nationality,sponsorid,email,password,gender) VALUES('$drid','$drname','$drlno','$drnat','$drspon','$dremail','$drpass',' $drgen')") or die($mysqli->error);
-  if ($sql) {
+  $conpass = $_POST['conpass'];
+  $a = 'ee';
+  $sql = $mysqli->query("INSERT INTO driverdetails(national_id,fullname,lincensenumber,nationality,sponsorid,email,password,gender) VALUES('$drid','$drname','$drlno','$drnat','$drspon','$dremail','$drpass',' $drgen')") or die($mysqli_error($a));
 
-    echo "<script>alert('record added successfully');
+  if ($sql) {
+    if ($conpass != $drpass) {
+      echo "<script>alert('password do not march');
+      window.location.replace('index.php');
+
+          </script>";
+    } else {
+      echo "<script>alert('record added successfully');
        window.location.replace('index.php');
 
            </script>";
+    }
   } else {
     echo "<script><alert>(' failed');
            window.location.replace('index.php');
@@ -719,18 +732,15 @@ if (isset($_GET['delmid'])) {
 }
 //book event
 if (isset($_GET['bpid'])) {
-  $email=$login_session;
-  $result=$mysqli->query("select * from driverdetails where email='$email'")or die($mysqli->error);
-  while($row=$result->fetch_assoc())
-  {
-  $dfname=$row['fullname'];
-  $dlname['fullname'];
+  $email = $login_session;
+  $result = $mysqli->query("select * from driverdetails where email='$email'") or die($mysqli->error);
+  while ($row = $result->fetch_assoc()) {
+    $dfname = $row['fullname'];
+    $dlname['fullname'];
   }
 
   $id = $_GET['bpid'];
   $sql = $mysqli->query("update  eventdetail set status='booked',drivername='$dfname',codrivername='$dlname' where id='$id'") or die($mysqli->error);
-
-
 }
 //change table to paid
 if (isset($_GET['bpid2'])) {
@@ -816,15 +826,14 @@ if (isset($_POST['adcod'])) {
 
   $codfname = $_POST['codfname'];
   $codlname = $_POST['codlname'];
-  $codnatid = $_POST['codnatid'];
-
   $codnat = $_POST['codnat'];
+  $codnatid = $_POST['codnatid'];
   $codgen = $_POST['codgen'];
   $codemail = $_POST['codemail'];
+  $drvemail = $_POST['drvemail'];
 
 
-
-  $sql = $mysqli->query("INSERT INTO codriverdetails(firstname,secondname,national_id,nationality,gender,email)VALUES('$codfname','$codlname','$codnatid','$codnat','$codgen','$codemail')") or die($mysqli->error);
+  $sql = $mysqli->query("INSERT INTO codriverdetails(firstname,secondname,national_id,nationality,gender,email,driver_email)VALUES('$codfname','$codlname','$codnatid','$codnat','$codgen','$codemail','$drvemail')") or die($mysqli->error);
   if ($sql) {
     $_SESSION['codriver'] = $codemail;
     echo "<script>alert(' success');
@@ -893,12 +902,14 @@ if (isset($_POST['adtm'])) {
   $tmtno = $_POST['tmtno'];
   $tmdname = $_POST['tmdname'];
   $tmcodname = $_POST['tmcodname'];
+  $tmcodname2 = $_POST['tmcodname2'];
   $tmrcno = $_POST['tmrcno'];
   $tmpid = $_POST['tmpid'];
+  $tmdemail = $_POST['tmdemail'];
 
 
+  $sql = $mysqli->query("INSERT INTO team(teamtagnumber,drivername,codrivername,codriver_secondname,racecarregistrationnumber,paymentid,driver_email)VALUES('$tmtno','$tmdname','$tmcodname','$tmcodname2','$tmrcno','$tmpid','$tmdemail')") or die($mysqli->error);
 
-  $sql = $mysqli->query("INSERT INTO team(teamtagnumber,drivername,codrivername,racecarregistrationnumber,paymentid)VALUES('$tmtno','$tmdname','$tmcodname','$tmrcno','$tmpid')") or die($mysqli->error);
   if ($sql) {
     $_SESSION['recee'] = $tmrcno;
     echo "<script>alert('record added successfully');
@@ -906,7 +917,7 @@ if (isset($_POST['adtm'])) {
 
            </script>";
   } else {
-    echo "<script><alert>(' failed');
+    echo "<script><alert>('failed');
            window.location.replace('editteams.php');
            </script>";
   }
@@ -958,15 +969,13 @@ if (isset($_GET['deltmid'])) {
 //add payments
 
 if (isset($_POST['adpay'])) {
-
+  $id = $_POST['id'];
   $ptrid = $_POST['ptrid'];
   $pname = $_POST['pname'];
-  $ppf = $_POST['ppf'];
-  $puc = $_POST['puc'];
   $pamount = $_POST['pamount'];
-
-
-  $sql = $mysqli->query("INSERT INTO paymentdetails(transactiontid,accountname,amountpaid,paymentfor,usercategory)VALUES('$ptrid','$pname','$pamount','$ppf','$puc')") or die($mysqli->error);
+  $pdate = $_POST['pdate'];
+  $pa='payment_pending';
+  $sql = $mysqli->query("UPDATE eventdetail set transaction_id='$ptrid',driver_email='$pname',amount='$pamount',payment_date='$pdate',payment_status='$pa' where id='$id' ") or die($mysqli->error);
   if ($sql) {
 
     echo "<script>alert('record added successfully');
@@ -1031,22 +1040,22 @@ if (isset($_POST['ufd'])) {
 }
 //create feedback
 if (isset($_POST['cfd'])) {
-
-  $fdemail = $_POST['fdemail'];
+  $fdremail = $_POST['fdremail'];
+  $fdsemail = $_POST['fdsemail'];
   $fdmessage = $_POST['fdmessage'];;
 
 
 
-  $sql = $mysqli->query("INSERT INTO feedback (email,message) values('$fdemail','$fdmessage')") or die($mysqli->error);
+  $sql = $mysqli->query("INSERT INTO feedback (receiver,email,message) values('$fdsemail','$fdremail','$fdmessage')") or die($mysqli->error);
   if ($sql) {
 
     echo "<script>alert('record added successfully');
-       window.location.replace('feedback.php');
+       window.location.replace('sentbox.php');
 
            </script>";
   } else {
     echo "<script><alert>(' failed');
-           window.location.replace('feedback.php');
+           window.location.replace('createfeedback.php');
            </script>";
   }
 }
@@ -1084,7 +1093,7 @@ if (isset($_POST['adrcar'])) {
   $rengno = $_POST['rengno'];
   $rpdcolor = $_POST['rpdcolor'];
   $rndo = $_POST['rndo'];
-
+  $drvemail = $_POST['drvemail'];
 
   $sql = $mysqli->query("INSERT INTO racecar (make,
            model,
@@ -1095,7 +1104,8 @@ if (isset($_POST['adrcar'])) {
            cc,
            chasis,
            engine_number,
-           predominant_color) values( 
+           predominant_color,
+           driver_email) values( 
   '$rmake',
   '$rmodel',
   '$ryear ',
@@ -1105,7 +1115,8 @@ if (isset($_POST['adrcar'])) {
   '$rcc' ,
   '$rchasis',
   '$rengno' ,
-  '$rpdcolor' )") or die($mysqli->error);
+  '$rpdcolor',
+  '$drvemail')") or die($mysqli->error);
   if ($sql) {
 
     echo "<script>alert('record added successfully');
@@ -1131,6 +1142,7 @@ if (isset($_POST['adrecar'])) {
   $rengno = $_POST['rengno'];
   $rpdcolor = $_POST['rpdcolor'];
   $rndo = $_POST['rndo'];
+  $drvemail = $_POST['drvemail'];
 
 
   $sql = $mysqli->query("INSERT INTO receecar (make,
@@ -1142,7 +1154,8 @@ if (isset($_POST['adrecar'])) {
            cc,
            chasis,
            engine_number,
-           predominant_color) values( 
+           predominant_color,
+           driver_email) values( 
   '$rmake',
   '$rmodel',
   '$ryear ',
@@ -1152,7 +1165,8 @@ if (isset($_POST['adrecar'])) {
   '$rcc' ,
   '$rchasis',
   '$rengno' ,
-  '$rpdcolor' )") or die($mysqli->error);
+  '$rpdcolor',
+  '$drvemail' )") or die($mysqli->error);
   if ($sql) {
 
     echo "<script>alert('record added successfully');
@@ -1165,4 +1179,3 @@ if (isset($_POST['adrecar'])) {
            </script>";
   }
 }
-

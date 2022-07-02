@@ -39,9 +39,9 @@ include('session.php');
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -56,7 +56,7 @@ include('session.php');
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-table"></i> Events</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="main.php">Home</a></li>
             </ol>
           </div>
         </div>
@@ -71,32 +71,29 @@ include('session.php');
                <table class="table-responsive table table-bordered" id="events">
                 <thead>
                   <tr>
-                    <th>EventID</th>
+                   
                     <th>EventName</th>
                     <th>Sponsor</th>
                     <th>Organizer</th>
-                    <th>EventDate</th>
+                    <th>StartDate</th>
                     <th>Venue</th>
                     <th>EndDate</th>
                     <th>Duration</th>
-                    <th>DriverFirstname</th>
-                    <th>CoDrivername</th>
-                    <th>Numberofcompetitiors</th>
-                 
+                  
                     <th>Status</th>
          
                   </tr>
                 </thead>
                 <tbody>
                 <?php
-                  $result=$mysqli->query("select * from eventdetail where status='available'")or die($mysqli->error);
+                  $result=$mysqli->query("select * from eventdetail where status='approved'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
 
                     "
                     <tbody>
-                    <td>".$row['eventid']."</td>
+                  
                     <td>".$row['eventname']."</td>
                     <td>".$row['sponsor']."</td>
                     <td>".$row['organizer']."</td>
@@ -104,13 +101,9 @@ include('session.php');
                     <td>".$row['venue']."</td>
                     <td>".$row['duration']."</td>
                     <td>".$row['nduration']."</td>
-                    <td>".$row['drivername']."</td>
                    
-                    <td>".$row['codrivername']."</td>
-                    <td>".$row['numberofcompetitiors']."</td>
-                
                     <td>".$row['status']."</td>
-                    <td> <a href='viewevents.php?bpid=$row[id]' class='btn btn-success' >Book</a>
+                    <td> <a href='bookevent.php?bpid=$row[id]' class='btn btn-success' >Book</a>
                    </td>
                    </tbody>
                     "
@@ -121,15 +114,19 @@ include('session.php');
                 //book event
 if (isset($_GET['bpid'])) {
   $email=$login_session;
-  $result=$mysqli->query("select * from driverdetails where email='$email'")or die($mysqli->error);
+  $result=$mysqli->query("select * from team where driver_email='$email'")or die($mysqli->error);
   while($row=$result->fetch_assoc())
   {
-  $dfname=$row['fullname'];
-  $dlname=$row['email'];
-  }
-
+  $dfname=$row['drivername'];
+  $dlname=$row['codrivername'];
+  $ttno=$row['teamtagnumber'];
   $id = $_GET['bpid'];
-  $sql = $mysqli->query("update  eventdetail set status='booked',drivername='$dfname',codrivername='$dlname' where id='$id'") or die($mysqli->error);
+  $sql = $mysqli->query("update  eventdetail set status='booked',drivername='$dfname',teamtagnumber='$ttno',codrivername='$dlname' where id='$id'") or die($mysqli->error);
+  if($sql)
+  {
+    echo"<script>window.location.replace('bookevent.php')</script>";
+  }
+  }
 
 
 }?>
@@ -144,38 +141,35 @@ if (isset($_GET['bpid'])) {
           <div class="col-12">
             <section class="panel">
               <header class="panel-heading">
-               Unpaid for events
+               Events yet to be paid for
               </header>
               <div class="table-responsive">
                <table class="table-responsive table table-bordered" id="events">
                 <thead>
                   <tr>
-                    <th>EventID</th>
+                 
                     <th>EventName</th>
                     <th>Sponsor</th>
                     <th>Organizer</th>
-                    <th>EventDate</th>
+                    <th>StartDate</th>
                     <th>Venue</th>
                     <th>EndDate</th>
                     <th>Duration</th>
-                    <th>DriverFirstname</th>
-                    <th>Email</th>
-                    <th>Numberofcompetitiors</th>
-                   
+                  
                     <th>Status</th>
          
                   </tr>
                 </thead>
                 <tbody>
                 <?php
-                  $result=$mysqli->query("select * from eventdetail where status='booked'")or die($mysqli->error);
+                  $result=$mysqli->query("select * from eventdetail where  driver_email='$login_session' and status='booked' and payment_status='nopay'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
 
                     "
                     <tbody>
-                    <td>".$row['eventid']."</td>
+                  
                     <td>".$row['eventname']."</td>
                     <td>".$row['sponsor']."</td>
                     <td>".$row['organizer']."</td>
@@ -183,61 +177,78 @@ if (isset($_GET['bpid'])) {
                     <td>".$row['venue']."</td>
                     <td>".$row['duration']."</td>
                     <td>".$row['nduration']."</td>
-                    <td>".$row['drivername']."</td>
-                    <td>".$row['codrivername']."</td>
-                    <td>".$row['numberofcompetitiors']."</td>
-                  
+                   
                     <td>".$row['status']."</td>
-                    <td> <a href='process.php?bpid2=$row[id]' class='btn btn-info' >pay</a>
+                    <td> <a href='createpayments.php?bpid=$row[id]' class='btn btn-success' >Pay</a>
                    </td>
                    </tbody>
                     "
                   ;}
             ?>
                 </tbody>
-                
+                <?php
+                //book event
+if (isset($_GET['bpid'])) {
+  $email=$login_session;
+  $result=$mysqli->query("select * from team where driver_email='$email'")or die($mysqli->error);
+  while($row=$result->fetch_assoc())
+  {
+  $dfname=$row['drivername'];
+  $dlname=$row['codrivername'];
+  $ttno=$row['teamtagnumber'];
+  $id = $_GET['bpid'];
+  $sql = $mysqli->query("update  eventdetail set status='booked',drivername='$dfname',teamtagnumber='$ttno',codrivername='$dlname' where id='$id'") or die($mysqli->error);
+  if($sql)
+  {
+    echo"<script>window.location.replace('bookevent.php')</script>";
+  }
+  }
+
+
+}?>
+
               </table>
               <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
                   </div>
             </section>
           </div>
         </div>
+
         <div class="row">
           <div class="col-12">
             <section class="panel">
               <header class="panel-heading">
-              final race list
+               Booked Events
               </header>
               <div class="table-responsive">
                <table class="table-responsive table table-bordered" id="events">
                 <thead>
                   <tr>
-                    <th>EventID</th>
+                 
                     <th>EventName</th>
                     <th>Sponsor</th>
                     <th>Organizer</th>
-                    <th>EventDate</th>
+                    <th>StartDate</th>
                     <th>Venue</th>
                     <th>EndDate</th>
                     <th>Duration</th>
-                    <th>DriverFirstname</th>
-                    <th>Email</th>
-                    <th>Numberofcompetitiors</th>
-                  
+                  <th>Driver Name</th>
+                  <th>Co Driver Name</th>
+                  <th>Team Tag No</th>
                     <th>Status</th>
          
                   </tr>
                 </thead>
                 <tbody>
                 <?php
-                  $result=$mysqli->query("select * from eventdetail where status='approved' order by eventid")or die($mysqli->error);
+                  $result=$mysqli->query("select * from eventdetail where  driver_email='$login_session' and status='booked' and payment_status!='nopay'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
 
                     "
                     <tbody>
-                    <td>".$row['eventid']."</td>
+                   
                     <td>".$row['eventname']."</td>
                     <td>".$row['sponsor']."</td>
                     <td>".$row['organizer']."</td>
@@ -247,22 +258,42 @@ if (isset($_GET['bpid'])) {
                     <td>".$row['nduration']."</td>
                     <td>".$row['drivername']."</td>
                     <td>".$row['codrivername']."</td>
-                    <td>".$row['numberofcompetitiors']."</td>
-                    
-                    <td>".$row['status']."</td>
-                  
+                    <td>".$row['teamtagnumber']."</td>
+                    <td>".$row['payment_status']."</td>
+                   
                    </tbody>
                     "
                   ;}
             ?>
                 </tbody>
-                
+                <?php
+                //book event
+if (isset($_GET['bpid'])) {
+  $email=$login_session;
+  $result=$mysqli->query("select * from team where driver_email='$email'")or die($mysqli->error);
+  while($row=$result->fetch_assoc())
+  {
+  $dfname=$row['drivername'];
+  $dlname=$row['codrivername'];
+  $ttno=$row['teamtagnumber'];
+  $id = $_GET['bpid'];
+  $sql = $mysqli->query("update  eventdetail set status='booked',drivername='$dfname',teamtagnumber='$ttno',codrivername='$dlname' where id='$id'") or die($mysqli->error);
+  if($sql)
+  {
+    echo"<script>window.location.replace('bookevent.php')</script>";
+  }
+  }
+
+
+}?>
+
               </table>
               <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
                   </div>
             </section>
           </div>
         </div>
+       
         <!-- page end-->
       </section>
     </section>
@@ -272,10 +303,10 @@ if (isset($_GET['bpid'])) {
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
-          &copy <a href="https://John elton okoth.com/">John elton okoth</a>
+          &copy <a href="https://paul waweru.com/">paul waweru</a>
         </div>
     </div>
   </section>

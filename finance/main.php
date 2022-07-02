@@ -41,9 +41,9 @@ include("sidebar.php")
   <link href="../logistics/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
   <!-- =======================================================
     Theme Name: NiceAdmin
-    Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-    Author: John elton okoth
-    Author URL: https://John elton okoth.com
+    Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+    Author: paul waweru
+    Author URL: https://paul waweru.com
   ======================================================= -->
 </head>
 
@@ -59,7 +59,7 @@ include("sidebar.php")
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="main.php">Home</a></li>
               <li><i class="fa fa-laptop"></i>Dashboard</li>
             </ol>
           </div>
@@ -70,11 +70,11 @@ include("sidebar.php")
             <div class="info-box blue-bg">
             <i class="fa fa-cubes"></i>
               <div class="count"><?php
-              $result=$mysqli->query("select *  from eventdetail") or die(mysqli_error($mysqli));
+              $result=$mysqli->query("select id from eventdetail where  payment_status='payment_pending'") or die(mysqli_error($mysqli));
            
-              while(list($eventid,$eventname,$sponsor,$organizer,$eventdate,$venue,$duration,$numberofcompetitiors,$teamtagnumber,$scheduleid,$awardid)=mysqli_fetch_array($result))
+              while(list($id)=mysqli_fetch_array($result))
               {
-                $sql="SELECT COUNT(Eventid) AS total FROM eventdetail";
+                $sql="SELECT COUNT(id) AS total FROM eventdetail where payment_status='payment_pending'";
                 $result=$mysqli->query($sql);
                 $values=mysqli_fetch_assoc($result);
                 $num_rows=$values["total"];
@@ -82,12 +82,31 @@ include("sidebar.php")
               }
               ?>
               </div>
-              <div class="title">Events</div>
+              <div class="title">Payments</div>
             </div>
             <!--/.info-box-->
           </div>
           <!--/.col-->
 
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box brown-bg">
+            <i class="fa fa-cubes"></i>
+            <?php
+              $result=$mysqli->query("select id from schedule") or die(mysqli_error($mysqli));
+           
+              while(list($id)=mysqli_fetch_array($result))
+              {
+                $sql="SELECT COUNT(id) AS total FROM schedule";
+                $result=$mysqli->query($sql);
+                $values=mysqli_fetch_assoc($result);
+                $num_rows=$values["total"];
+                echo "<h3>$num_rows</h3>";
+              }
+              ?>
+              <div class="title">Fixtures</div>
+            </div>
+            <!--/.info-box-->
+          </div>
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box brown-bg">
             <i class="fa fa-cubes"></i>
@@ -171,9 +190,9 @@ include("sidebar.php")
               <div class="panel-heading">
                 <h2><i class="fa fa-flag-o red"></i><strong>Registered Users</strong></h2>
                 <div class="panel-actions">
-                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
-                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+                  <a href="main.php#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+                  <a href="main.php#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+                  <a href="main.php#" class="btn-close"><i class="fa fa-times"></i></a>
                 </div>
               </div>
               <div class="panel-body">
@@ -326,8 +345,8 @@ include("sidebar.php")
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
         </div>
       </div>

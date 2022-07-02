@@ -36,9 +36,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -68,10 +68,8 @@ include("sidebar.php");
                <table class="table-responsive table table-bordered" id="codrivers">
                 <thead>
                   <tr>
-                    <th>FirstName</th>
-                    <th>SecondName</th>
+                    <th>Full Name</th>
                     <th>NationalID</th>
-                    <th>TeamID</th>
                     <th>Nationality</th>
                     <th>Gender</th>
                     <th>Email</th>
@@ -82,7 +80,7 @@ include("sidebar.php");
                 <tbody>
 
                 <?php
-                  $result=$mysqli->query("select * from codriverdetails")or die($mysqli->error);
+                  $result=$mysqli->query("select * from codriverdetails where driver_email='$login_session'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
@@ -90,9 +88,7 @@ include("sidebar.php");
                     "
                     <tbody>
                     <td>".$row['firstname']."</td>
-                    <td>".$row['secondname']."</td>
                     <td>".$row['national_id']."</td>
-                    <td>".$row['teamid']."</td>
                     <td>".$row['nationality']."</td>
                     <td>".$row['gender']."</td>
                     <td>".$row['email']."</td>
@@ -117,10 +113,10 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
-          &copy <a href="https://John elton okoth.com/">John elton okoth</a>
+          &copy <a href="https://paul waweru.com/">paul waweru</a>
         </div>
     </div>
   </section>

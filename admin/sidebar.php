@@ -29,6 +29,23 @@
           </li>
           <li class="sub-menu">
             <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>View</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+            <li><a class="" href="viewevents.php">Events</a></li>
+            <li><a class="" href="viewteams.php">Teams</a></li>
+            <li><a class="" href="viewfixtures.php">Fixtures</a></li>
+            <li><a class="" href="viewstandings.php">Standings</a></li>
+              <li><a class="" href="viewawards.php">Awards</a></li>
+           
+              
+            
+            </ul>
+          </li>
+          <!-- <li class="sub-menu">
+            <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
                           <span>Award Points</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
@@ -37,8 +54,8 @@
               <li><a class="" href="editstandings.php">Award Points</a></li>
               <li><a class="" href="viewstandings.php">View Standings</a></li>  
             </ul>
-          </li>
-          <li class="sub-menu">
+          </li> -->
+          <!-- <li class="sub-menu">
             <a href="javascript:;" class="">
                           <i class="icon_desktop"></i>
                           <span>Service Car</span>
@@ -48,7 +65,7 @@
               <li><a class="createstandings.php" href="editserviceparks.php"> AddServiceID</a></li>
               <li><a class="viewstandings.php" href="viewserviceparks.php">View Service</a></li>
             </ul>
-          </li>
+          </li> -->
         
          
 

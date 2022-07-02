@@ -123,7 +123,7 @@ CREATE TABLE `eventdetail` (
   `eventdate` date NOT NULL,
   `venue` varchar(50) NOT NULL,
   `duration` varchar(50) NOT NULL,
-  `numberofcompetitiors` varchar(50) NOT NULL,
+  `numberofcompetitors` varchar(50) NOT NULL,
   `teamtagnumber` varchar(50) NOT NULL,
   `scheduleid` varchar(50) NOT NULL,
   `awardid` varchar(50) NOT NULL
@@ -133,7 +133,7 @@ CREATE TABLE `eventdetail` (
 -- Dumping data for table `eventdetail`
 --
 
-INSERT INTO `eventdetail` (`id`, `eventid`, `eventname`, `sponsor`, `organizer`, `eventdate`, `venue`, `duration`, `numberofcompetitiors`, `teamtagnumber`, `scheduleid`, `awardid`) VALUES
+INSERT INTO `eventdetail` (`id`, `eventid`, `eventname`, `sponsor`, `organizer`, `eventdate`, `venue`, `duration`, `numberofcompetitors`, `teamtagnumber`, `scheduleid`, `awardid`) VALUES
 (1, 'safari001', 'naivasha R1', 'KCB', 'KCB', '2021-07-23', 'testvebyyr', '2:00:00', '77', '23', 'r', 'l');
 
 -- --------------------------------------------------------

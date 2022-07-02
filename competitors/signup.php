@@ -131,7 +131,7 @@ span a {
 		<div class="header-text">
 			Signup Form
 		</div>
-		<form class="form-horizontal " method="POST" action="process.php">
+		<form class="form-horizontal " method="POST" action="process.php"  oninput='up2.setCustomValidity(conpass.value != drpass.value ? "Passwords do not match." : "")'>
                
 			   <div class="form-group">
 			
@@ -193,13 +193,13 @@ span a {
 			   <div class="form-group">
 				
 				 <div class="col-sm-10">
-				   <input name="drpass" type="password" class="form-control round-input" placeholder="input password" required  minlength="5"   id="myInput" maxlength="12" onkeyup='check()'>
+				   <input name="drpass"  type="password" class="form-control round-input" placeholder="input password" required  minlength="5"   id="myInput2" maxlength="12" onkeyup='check()'>
 				 </div>
 			   </div>
 			   <div class="form-group">
 				
 				<div class="col-sm-10">
-				  <input type="password" class="form-control" placeholder="confirm password" required  minlength="5"  maxlength="12" style="background-color:#ddd" id="myInput" onkeyup='check()' >
+				  <input type="password" class="form-control" placeholder="confirm password" required  minlength="5"  maxlength="12"  name="conpass" style="background-color:#ddd" id="myInput" onkeyup='check()' >
 				</div>
 			  </div>
 			  <div class="form-group">
@@ -216,10 +216,13 @@ span a {
 <script src="../assets/js/main.js"></script>
 <script>function myFunction() {
   var x = document.getElementById("myInput");
+  var y = document.getElementById("myInput2");
   if (x.type === "password") {
     x.type = "text";
+	y.type = "text";
   } else {
     x.type = "password";
+	y.type = "password";
   }
 }
 </script>
@@ -235,5 +238,7 @@ var check = function() {
     document.getElementById('message').innerHTML = 'not matching';
   }
 }
+ 
+
 </script>
 </html>

@@ -37,9 +37,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -107,6 +107,7 @@ include("sidebar.php");
     
               </table>
               <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
+
                   </div>
             </section>
           </div>
@@ -120,10 +121,10 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
-          &copy <a href="https://John elton okoth.com/">John elton okoth</a>
+          &copy <a href="https://paul waweru.com/">paul waweru</a>
         </div>
     </div>
   </section>
@@ -136,6 +137,7 @@ include("sidebar.php");
   <script src="../logistics/js/jquery.nicescroll.js" type="text/javascript"></script>
   <!--custome script for all page-->
   <script src="../logistics/js/scripts.js"></script>
+
   <script type="text/javascript">
 
 function fnExcelReport()
@@ -205,7 +207,6 @@ function fnExcelReport()
 }
 
 </script>
-
 
 </body>
 

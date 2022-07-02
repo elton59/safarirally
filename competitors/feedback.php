@@ -14,7 +14,7 @@ include("sidebar.php");
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>FeeBack</title>
+  <title>Feedback</title>
 
   <!-- Bootstrap CSS -->
   <link href="../logistics/css/bootstrap.min.css" rel="stylesheet">
@@ -37,9 +37,9 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
@@ -54,7 +54,8 @@ include("sidebar.php");
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-table"></i> Feedback</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="createfeedback.php">New Message</a></li>
+              <li><i></i><a href="createfeedback.php">Compose Message</a></li>
+              <li><i></i><a href="sentbox.php">Sent Messages</a></li>
             </ol>
           </div>
         </div>
@@ -63,18 +64,17 @@ include("sidebar.php");
           <div class="col-12">
             <section class="panel">
               <header class="panel-heading">
-                Feedback
+              Inbox
               </header>
               <div class="table-responsive">
               <table class="table-responsive table table-bordered">
                 <thead>
                   <tr>
                     <th>Received From</th>
-                    <th>Status</th>
+                    
                     <th>message</th>
-                    <th>Reply</th>
                     <th>Date</th>
-                   
+                    <th>Status</th>
                    
                   </tr>
                 </thead>
@@ -82,20 +82,20 @@ include("sidebar.php");
               
                 <?php
                   $feed=$login_session;
-                  $result=$mysqli->query("select * from feedback  where email='$feed'")or die($mysqli->error);
+                  $result=$mysqli->query("select * from feedback  where receiver='$feed'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
 
                     "
                     <tbody>
-                    <td>".$row['sender']."</td>
-                    <td>".$row['status']."</td>
-                    <td>".$row['message']."</td>
-                    <td>".$row['reply']."</td>
-                    <td>".$row['date']."</td>
+                    <td>".$row['email']."</td>
                   
-                    <td> <a href='feedback.php?apfdid=$row[id]'class='btn btn-primary' >Reply<a>
+                    <td>".$row['message']."</td>
+                   
+                    <td>".$row['date']."</td>
+                    <td>".$row['status']."</td>
+                    <td> 
                    <a href='process.php? rfdid=$row[id]' class='btn btn-success' >Mark as Read<a></td>
                    
                    </tbody>
@@ -122,14 +122,11 @@ include("sidebar.php");
     echo "success";
     
 }
-else
-{
-    echo "record will be displayed here";
-}
+
 
 ?>
  <div class="form-group" >
- <form class="form-horizontal " method="POST" action="process.php">
+ <!-- <form class="form-horizontal " method="POST" action="process.php">
  <input  name="id"type="hidden" class="form-control round-input"  value='<?php echo $id; ?>'>
 
                <div class="form-group">
@@ -167,7 +164,7 @@ else
                <center>
                <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="submit" name="ufd" value="Send"/>
                 <input class="btn btn-primary" href="" title="Bootstrap 3 themes generator" type="reset" value="Cancel"/></center>
-             </form>                        
+             </form>                         -->
 
 
                      
@@ -185,10 +182,10 @@ else
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
           -->
-          &copy <a href="https://John elton okoth.com/">John elton okoth</a>
+          &copy <a href="https://paul waweru.com/">paul waweru</a>
         </div>
     </div>
   </section>

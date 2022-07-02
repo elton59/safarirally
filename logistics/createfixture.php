@@ -43,13 +43,25 @@ include("sidebar.php");
 
     <!-- =======================================================
       Theme Name: NiceAdmin
-      Theme URL: https://John elton okoth.com/nice-admin-bootstrap-admin-html-template/
-      Author: John elton okoth
-      Author URL: https://John elton okoth.com
+      Theme URL: https://paul waweru.com/nice-admin-bootstrap-admin-html-template/
+      Author: paul waweru
+      Author URL: https://paul waweru.com
     ======================================================= -->
 </head>
 
 <body>
+<?php
+  
+   $bpid=$_GET['rffpid'];
+   $result=$mysqli->query("select * from eventdetail where id='$bpid'");
+   $row=$result->fetch_assoc();
+   $id=$row['id'];
+   $event_name=$row['eventname'];
+   $eventdate=$row['eventdate'];
+   $duration=$row['duration'];
+
+   
+?>
 
   <!-- container section start -->
   <section id="container" class="">
@@ -62,7 +74,7 @@ include("sidebar.php");
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-file-text-o"></i> Create Fixture</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="index.php">Home</a></li>
             
             </ol>
           </div>
@@ -78,23 +90,25 @@ include("sidebar.php");
                
                   <div class="form-group">
                     <label class="col-sm-2 control-label">EventID</label>
+                    <div class="col-sm-10" >
+                      <input name="schid" class="form-control round-input" value="<?php echo $id ?>" readonly/>
+                    </div>
+                  </div>      
+                      <div class="form-group">
+                    <label class="col-sm-2 control-label">Event Name</label>
                     <div class="col-sm-10">
-                      <input  name="schid"type="text" class="form-control round-input" placeholder="input event ID">
+                      <input name="schevname" class="form-control round-input" value="<?php echo $event_name?>"/>
                     </div>
                   </div>
+                 
                   <div class="form-group">
                     <label class="col-sm-2 control-label">RaceDate</label>
                     <div class="col-sm-10">
-                      <input name="schrdate" type="date" class="form-control round-input" placeholder="input Race Date" min="<?php echo date('Y-m-d') ?>"
-                        >
+                      <input name="schrdate" type="date" class="form-control round-input" placeholder="input Race Date" min="<?php echo date($eventdate) ?>"
+                      max="<?php echo date($duration) ?>" >
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label">Number Of Participants</label>
-                    <div class="col-sm-10">
-                      <input name="schnop" type="number" class="form-control round-input" placeholder="input  Number of Participants ">
-                    </div>
-                  </div>
+
                   <div class="form-group">
                    
                     <div class="col-sm-10">
@@ -148,8 +162,8 @@ include("sidebar.php");
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
-            Licensing information: https://John elton okoth.com/license/
-            Purchase the pro version form: https://John elton okoth.com/buy/?theme=NiceAdmin
+            Licensing information: https://paul waweru.com/license/
+            Purchase the pro version form: https://paul waweru.com/buy/?theme=NiceAdmin
         </div>
     </div>
   </section>
