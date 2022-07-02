@@ -54,7 +54,7 @@ include("sidebar.php");
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-table"></i> Fixtures</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="main.php">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="index.php">Home</a></li>
             </ol>
           </div>
         </div>
@@ -107,6 +107,7 @@ include("sidebar.php");
     
               </table>
               <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
+
                   </div>
             </section>
           </div>

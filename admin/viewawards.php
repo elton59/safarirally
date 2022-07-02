@@ -54,7 +54,7 @@ include("sidebar.php");
           <div class="col-lg-12">
             <h3 class="page-header"><i class="fa fa-table"></i> Awards</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="main.php">Home</a></li>
+              <li><i class="fa fa-home"></i><a href="index.php">Home</a></li>
             </ol>
           </div>
         </div>
@@ -69,7 +69,7 @@ include("sidebar.php");
                <table class="table-responsive table table-bordered" id="awards">
                 <thead>
                   <tr>
-                  
+                    
                     <th>Year</th>
                     <th>EventName</th>
                     <th>TeamTagNUmber</th>
@@ -90,6 +90,7 @@ include("sidebar.php");
 
                     "
                     <tbody>
+                   
                     <td>".$row['year']."</td>
                     <td>".$row['eventname']."</td>
                     <td>".$row['teamtagnumber']."</td>
@@ -134,21 +135,9 @@ include("sidebar.php");
   <script src="../logistics/js/jquery.nicescroll.js" type="text/javascript"></script>
   <!--custome script for all page-->
   <script src="../logistics/js/scripts.js"></script>
-  <script type="text/javascript">
 
-         
-
-$("[rel=tooltip]").tooltip();
-
-       $(function() {
-
-           $('.demo-cancel-click').click(function(){return false;});
-
-       });
-
-   </script>
-
-   <script type="text/javascript">
+</body>
+<script type="text/javascript">
 
 function fnExcelReport()
 
@@ -217,7 +206,5 @@ function fnExcelReport()
 }
 
 </script>
-
-</body>
 
 </html>

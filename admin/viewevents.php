@@ -54,31 +54,29 @@ include("sidebar.php");
           <div class="col-12">
             <section class="panel">
               <header class="panel-heading">
-         Final List
+       
               </header>
               <div class="table-responsive">
-               <table class="table-responsive table table-bordered" id="events">
+              <table class="table-responsive table table-bordered" id="events">
                 <thead>
                   <tr>
                   
-                    <th>EventName</th>
+                     
+                  <th>EventName</th>
                     <th>Sponsor</th>
                     <th>Organizer</th>
-                    <th>Venue</th>
                     <th>StartDate</th>
+                    <th>Venue</th>
                     <th>EndDate</th>
                     <th>Duration</th>
-                    <th>DriverFirstname</th>
-                    <th>DriverLastname</th>
                   
-                    <th>TeamTagNo</th>
-                 
+                   
          
                   </tr>
                 </thead>
                 <tbody>
                 <?php
-                  $result=$mysqli->query("select * from eventdetail where status='paid'")or die($mysqli->error);
+                  $result=$mysqli->query("select * from eventdetail where status='approved'")or die($mysqli->error);
                   while($row=$result->fetch_assoc())
                   {
                     echo
@@ -89,24 +87,21 @@ include("sidebar.php");
                     <td>".$row['eventname']."</td>
                     <td>".$row['sponsor']."</td>
                     <td>".$row['organizer']."</td>
-                    <td>".$row['venue']."</td>
                     <td>".$row['eventdate']."</td>
+                    <td>".$row['venue']."</td>
                     <td>".$row['duration']."</td>
                     <td>".$row['nduration']."</td>
-                    <td>".$row['drivername']."</td>
-                    <td>".$row['codrivername']."</td>
                    
-                    <td>".$row['teamtagnumber']."</td>
-                  
-                
+                   
                    </tbody>
                     "
+            
                   ;}
             ?>
                 </tbody>
                 
               </table>
-              <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
+           <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</button>
                   </div>
             </section>
           </div>
