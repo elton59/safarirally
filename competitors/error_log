@@ -1,0 +1,375 @@
+[08-Jul-2022 13:28:00 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/yubuntut/safarirallyproject.xyz/competitors/process.php on line 374
+[08-Jul-2022 13:34:20 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/yubuntut/safarirallyproject.xyz/competitors/process.php on line 374
+[12-Jul-2022 19:02:13 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/yubuntut/safarirallyproject.xyz/competitors/process.php on line 374
+[12-Jul-2022 19:11:44 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/yubuntut/safarirallyproject.xyz/competitors/process.php on line 374
+[12-Jul-2022 19:41:48 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/yubuntut/safarirallyproject.xyz/competitors/process.php on line 374
+[17-Jul-2022 10:19:52 UTC] PHP Warning:  include(../../../library/tcpdf.php): Failed to open stream: No such file or directory in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 41
+[17-Jul-2022 10:19:52 UTC] PHP Warning:  include(): Failed opening '../../../library/tcpdf.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 41
+[17-Jul-2022 10:19:52 UTC] PHP Fatal error:  Uncaught Error: Class "TCPDF" not found in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 44
+[17-Jul-2022 10:25:53 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 10:25:53 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 10:25:53 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 10:25:53 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 10:25:53 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 10:25:53 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 10:25:53 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 10:25:53 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 10:28:21 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 10:28:21 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 10:28:21 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 10:28:21 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 10:28:21 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 10:28:21 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 10:28:21 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 10:28:21 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 10:28:21 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 10:28:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 10:49:49 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 10:49:49 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 10:49:49 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 10:49:49 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 10:49:49 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 10:49:49 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 10:49:49 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 10:49:49 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 10:49:49 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 10:49:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 10:50:28 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 10:50:28 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 10:50:28 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 10:50:28 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 10:50:28 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 10:50:28 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 10:50:28 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 10:50:28 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 10:50:28 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 10:50:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 10:54:38 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 10:54:38 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 10:54:38 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 10:54:38 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 10:54:38 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 10:54:38 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 10:54:38 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 10:54:38 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 10:54:38 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 10:54:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 10:54:42 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 10:54:42 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 10:54:42 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 10:54:42 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 10:54:42 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 10:54:42 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 10:54:42 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 10:54:42 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 10:54:42 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 10:54:42 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 10:54:43 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 10:54:43 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 10:54:43 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 10:54:43 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 10:54:43 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 10:54:43 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 10:54:43 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 10:54:43 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 10:54:43 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 10:54:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 10:54:44 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 10:54:44 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 10:54:44 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 10:54:44 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 10:54:44 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 10:54:44 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 10:54:44 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 10:54:44 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 10:54:44 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 10:54:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 11:00:30 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 11:00:30 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 11:00:30 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 11:00:30 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 11:00:30 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 11:00:30 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 11:00:30 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 11:00:30 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 11:00:30 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 11:00:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 11:07:02 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 11:07:02 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 11:07:02 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 11:07:02 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 11:07:02 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 11:07:02 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 11:07:02 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 11:07:02 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 11:07:02 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 11:07:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 11:07:18 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 11:07:18 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 11:07:18 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 11:07:18 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 11:07:18 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 11:07:18 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 11:07:18 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 11:07:18 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 11:07:18 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 11:07:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 11:15:41 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 11:15:41 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 11:15:41 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 11:15:41 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 11:15:41 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 11:15:41 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 11:15:41 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 11:15:41 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 11:15:41 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 11:15:41 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 11:25:08 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 1998
+[17-Jul-2022 11:25:08 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $isunicode in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2024
+[17-Jul-2022 11:25:08 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2040
+[17-Jul-2022 11:25:08 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $setbom in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2060
+[17-Jul-2022 11:25:08 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2077
+[17-Jul-2022 11:25:08 UTC] PHP Deprecated:  Required parameter $currentfont follows optional parameter $str in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php on line 2093
+[17-Jul-2022 11:25:08 UTC] PHP Deprecated:  Required parameter $tagvspaces follows optional parameter $default_css in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 1139
+[17-Jul-2022 11:25:08 UTC] PHP Deprecated:  Required parameter $k follows optional parameter $points in /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_static.php on line 2488
+[17-Jul-2022 11:25:08 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 11:25:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/library/include/tcpdf_fonts.php:1998) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7657
+[17-Jul-2022 12:04:47 UTC] PHP Warning:  Undefined array key "driver" in /home/yubuntut/safarirallyproject.xyz/competitors/session.php on line 8
+[17-Jul-2022 12:04:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/competitors/session.php:8) in /home/yubuntut/safarirallyproject.xyz/competitors/session.php on line 29
+[17-Jul-2022 12:04:55 UTC] PHP Warning:  Undefined variable $login_session in /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php on line 12
+[17-Jul-2022 12:04:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/yubuntut/safarirallyproject.xyz/competitors/evreport.php:12) in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 7700
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20724
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$FontStyle in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20725
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$FontSizePt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20726
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$rMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20727
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$lMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20728
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$cell_padding in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20729
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$cell_margin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20730
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$LineWidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20731
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleWidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20732
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleCap in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20733
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleJoin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20734
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleDash in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20735
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$textrendermode in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20736
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$textstrokewidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20737
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$DrawColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20738
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$FillColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20739
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$TextColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20740
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$ColorFlag in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20741
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$bgcolor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20742
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$fgcolor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20743
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$htmlvspace in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20744
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$listindent in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20745
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$listindentlevel in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20746
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$listnum in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20747
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$listordered in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20748
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$listcount in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20749
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$lispacer in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20750
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$cell_height_ratio in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20751
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$font_stretching in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20752
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$font_spacing in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20753
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$alpha in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20754
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$lasth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20756
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$tMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20757
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$bMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20758
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$AutoPageBreak in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20759
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$PageBreakTrigger in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20760
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$x in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20761
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$y in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20762
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$w in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20763
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$h in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20764
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$wPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20765
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$hPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20766
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$fwPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20767
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$fhPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20768
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$page in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20769
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$current_column in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20770
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$num_columns in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20771
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$cell_margin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17257
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$cell_padding in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17258
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$page in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17259
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$lMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17260
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$rMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17261
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17262
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$FontStyle in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17263
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$FontSizePt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17264
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$font_subsetting in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4253
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$pdfa_mode in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4255
+[17-Jul-2022 12:06:19 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4259
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20724
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$FontStyle in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20725
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$FontSizePt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20726
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$rMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20727
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$lMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20728
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$cell_padding in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20729
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$cell_margin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20730
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$LineWidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20731
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleWidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20732
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleCap in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20733
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleJoin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20734
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleDash in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20735
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$textrendermode in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20736
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$textstrokewidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20737
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$DrawColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20738
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$FillColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20739
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$TextColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20740
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$ColorFlag in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20741
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$bgcolor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20742
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$fgcolor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20743
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$htmlvspace in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20744
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$listindent in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20745
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$listindentlevel in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20746
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$listnum in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20747
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$listordered in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20748
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$listcount in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20749
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$lispacer in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20750
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$cell_height_ratio in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20751
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$font_stretching in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20752
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$font_spacing in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20753
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$alpha in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20754
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$lasth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20756
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$tMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20757
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$bMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20758
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$AutoPageBreak in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20759
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$PageBreakTrigger in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20760
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$x in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20761
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$y in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20762
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$w in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20763
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$h in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20764
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$wPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20765
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$hPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20766
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$fwPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20767
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$fhPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20768
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$page in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20769
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$current_column in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20770
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$num_columns in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20771
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$cell_margin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17257
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$cell_padding in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17258
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$page in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17259
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$lMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17260
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$rMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17261
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17262
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$FontStyle in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17263
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$FontSizePt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17264
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$font_subsetting in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4253
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$pdfa_mode in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4255
+[17-Jul-2022 12:06:20 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4259
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20724
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$FontStyle in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20725
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$FontSizePt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20726
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$rMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20727
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$lMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20728
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$cell_padding in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20729
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$cell_margin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20730
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$LineWidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20731
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleWidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20732
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleCap in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20733
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleJoin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20734
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleDash in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20735
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$textrendermode in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20736
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$textstrokewidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20737
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$DrawColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20738
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$FillColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20739
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$TextColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20740
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$ColorFlag in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20741
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$bgcolor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20742
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$fgcolor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20743
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$htmlvspace in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20744
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$listindent in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20745
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$listindentlevel in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20746
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$listnum in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20747
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$listordered in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20748
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$listcount in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20749
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$lispacer in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20750
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$cell_height_ratio in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20751
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$font_stretching in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20752
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$font_spacing in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20753
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$alpha in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20754
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$lasth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20756
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$tMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20757
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$bMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20758
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$AutoPageBreak in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20759
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$PageBreakTrigger in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20760
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$x in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20761
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$y in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20762
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$w in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20763
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$h in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20764
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$wPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20765
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$hPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20766
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$fwPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20767
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$fhPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20768
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$page in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20769
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$current_column in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20770
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$num_columns in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20771
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$cell_margin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17257
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$cell_padding in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17258
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$page in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17259
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$lMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17260
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$rMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17261
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17262
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$FontStyle in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17263
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$FontSizePt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17264
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$font_subsetting in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4253
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$pdfa_mode in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4255
+[17-Jul-2022 12:08:50 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4259
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20724
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$FontStyle in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20725
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$FontSizePt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20726
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$rMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20727
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$lMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20728
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$cell_padding in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20729
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$cell_margin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20730
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$LineWidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20731
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleWidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20732
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleCap in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20733
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleJoin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20734
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$linestyleDash in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20735
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$textrendermode in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20736
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$textstrokewidth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20737
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$DrawColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20738
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$FillColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20739
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$TextColor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20740
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$ColorFlag in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20741
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$bgcolor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20742
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$fgcolor in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20743
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$htmlvspace in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20744
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$listindent in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20745
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$listindentlevel in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20746
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$listnum in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20747
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$listordered in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20748
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$listcount in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20749
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$lispacer in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20750
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$cell_height_ratio in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20751
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$font_stretching in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20752
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$font_spacing in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20753
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$alpha in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20754
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$lasth in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20756
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$tMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20757
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$bMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20758
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$AutoPageBreak in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20759
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$PageBreakTrigger in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20760
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$x in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20761
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$y in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20762
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$w in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20763
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$h in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20764
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$wPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20765
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$hPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20766
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$fwPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20767
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$fhPt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20768
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$page in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20769
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$current_column in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20770
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$num_columns in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 20771
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$cell_margin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17257
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$cell_padding in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17258
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$page in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17259
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$lMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17260
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$rMargin in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17261
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17262
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$FontStyle in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17263
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$FontSizePt in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 17264
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$font_subsetting in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4253
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$pdfa_mode in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4255
+[17-Jul-2022 12:08:53 UTC] PHP Warning:  Undefined property: TCPDF::$FontFamily in /home/yubuntut/safarirallyproject.xyz/library/tcpdf.php on line 4259
